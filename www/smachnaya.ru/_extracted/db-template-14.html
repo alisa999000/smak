@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{head}}
+
+
+<body>
+   {{header}} 
+<div class="container">
+[!FormLister?
+&formid=`profile`
+&exitTo=`16`	
+&controller=`Profile`
+&model=`Pathologic\EvolutionCMS\MODxAPI\modUsers`	
+&rules=`{
+    "email":{
+        "required":"??????? email",
+        "email":"???????? email",
+        "custom":{
+            "function":"\\FormLister\\Profile::uniqueEmail",
+            "message":"???? email ??? ?????????? ?????? ????????????"
+        }
+    },
+	"fullname":{
+        "required":"??????? ??? ????????????",
+        "alphaNumeric":"?????? ????? ? ?????",
+    }
+}`
+&formTpl=`form_personal`
+&messagesOuterTpl=`@CODE:<div class="alert alert-danger" role="alert">[+messages+]</div>`
+&successTpl=`@CODE:<div class="text-center">?????????? ?????????!</div>`
+&errorTpl=`@CODE:<span class="help-block">[+message+]</span>`
+!]
+	
+	
+	<div class="row row_lg hleb-cab" id="main_section">
+			   <div class="col-lg-12">
+			   	[[DLcrumbs?
+    &ownerTPL=`@CODE: <nav itemscope itemtype="https://schema.org/BreadcrumbList"><ul class="breadcrumps mb40" itemprop="itemListElement">[+crumbs.wrap+]</ul></nav>`
+    &tpl=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[+url+]" ><span itemprop="name">[+e.title+]</span></a></li>`
+    &tplCurrent=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[+e.title+]</span></li>`
+    &showCurrent=`1`
+]]
+			   </div>
+		
+		
+		<h1 class="tit-main">[*pagetitle*]</h1>
+		
+		
+		<div class="row block-data">
+			
+			<!--?????? ?????? -->
+			<div class="col-md-3">
+				<p class="bold">?????????? ????</p>
+			</div>
+			<div class="col-md-7">
+				<form action="" method="post">
+					
+					<label for="otchestvo">???</label><br>
+					<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="???" required>
+					<br><br>
+					<label for="otchestvo">???????</label><br>
+					<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="???????" required>
+					<br><br>
+					<label for="otchestvo">????????</label><br>
+					<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="????????" required>
+					<br>
+					
+					
+					<input class="submits" type="submit" name="update" value="????????? ?????????">
+				</form>
+				
+				<div class="divider"></div>
+			</div>
+			
+			
+			<!-- ????? --> 
+			<div class="col-md-3">
+				<p class="bold">?????</p>
+			</div>
+			
+			<div class="col-md-7">
+				<form action="" method="post">
+					
+					<div class="input-container">
+						<label for="dat">?????</label><br>
+						<input class="input-dat s" type="text" name="street" placeholder="????????, ?????-?????????, ????? ?????????, 141" required>
+						<span class="icon"><img src="/assets/images/edit.svg" alt="svg"></span>
+					</div>
+					
+					<br><br>
+					
+					<div class="fl-phone">
+						<div class="phn">
+							<label for="dat">????????, ????</label><br>
+							<div class="fl-input">
+								<div><input class="input-dat sss" placeholder="????? ????????" type="tel"></div>
+								<div><input class="input-dat ssss" placeholder="????" type="tel"></div>
+							</div>
+						</div>
+						<div class="kod">
+							<label for="dat">???????, ??? ?????</label><br>
+							<div class="fl-input">
+								<div><input class="input-dat sss" placeholder="???????" type="tel"></div>
+								<div><input class="input-dat ssss" placeholder="??? ?????" type="tel"></div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<input class="submits" type="submit" name="update" value="????????? ?????????">
+				</form>
+				
+				<div class="divider"></div>
+			</div>
+			
+			
+			
+			
+			<!-- ?????????? ????????? -->
+			<div class="col-md-3">
+				<p class="bold">?????????? ?????????</p>
+			</div>
+			
+			<div class="col-md-7">
+					<form action="" method="post">
+						
+						<label for="otchestvo">???</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="????????, lorem" required>
+						<br><br>
+						<label for="otchestvo">????</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="????????, lorem" required>
+						<br><br>
+						<label for="otchestvo">?/? (12 ????)</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="????????, lorem" required>
+						<br>
+						<label for="otchestvo">?/? (12 ????)</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="????????, lorem" required>
+						<br>
+						<label for="otchestvo">??? (9 ????)</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="????????, lorem" required>
+						<br>
+						
+					</form>
+				
+				
+				<div class="divider"></div>
+				
+				<br>
+				<p class="bold">??????? ??????? ??????</p>
+				<p class="del-text">??? ?????????? ????????. ??? ????????? ???? ?????? ????? ??????? ????????.</p>
+				<div class="del-but">???????</div>
+				
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		
+		
+		
+
+	</div>
+	
+	
+	
+	
+	<script>
+		document.getElementById('changepass').addEventListener('click', function() {
+			const toggleBlock = document.getElementById('toggleBlocks');
+			const arrow = document.querySelector('.arr-bl');
+			
+			toggleBlock.classList.toggle('hiddens');
+			
+			if (toggleBlock.classList.contains('hiddens')) {
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+		});
+	</script>
+	
+	</div>
+	
+	{{footer}}
+	</body>
+</html>

@@ -1,0 +1,24 @@
+		<div class="title">Ваш заказ</div>
+			<div class="itog">
+				<div class="count_tovar">[+count+] товаров</div>
+				<div class="total_tovar">[[PriceFormat? &price=`[+items_price+]`  &convert=`0`]]</div>
+			</div>	
+            
+            <div class="itog_deliv">
+			[+subtotals+]
+			</div>
+			<div class="all_itog">
+				<div class="all_itog_title">
+				Общий итог:
+				</div>
+				<div class="all_itog_price">
+					[[PriceFormat? &price=`[+total+]`  &convert=`0`]]
+				</div>
+			</div>
+		
+		
+				<div class="order-sidebar-action">
+					[+form.messages+]
+					<button type="submit" class="btn btn-green ">Оформить заказ [[PriceFormat? &price=`[+total+]`  &convert=`0`]]</button>
+				</div>
+		

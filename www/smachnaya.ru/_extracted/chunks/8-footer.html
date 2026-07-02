@@ -1,0 +1,106 @@
+  <footer>
+      <div class="bottom_menu">
+        <div class="logo">
+          <a href="#"><img src="/image/logo.png" alt="Логотип Смачаная точка"></a>
+        </div>
+        <div class="working-hours_phone">
+            <a href="[[DocInfo? &docid=`28` &field=`phone_number`]]">[[DocInfo? &docid=`28` &field=`phone_number`]]</a>
+            <p>[[DocInfo? &docid=`28` &field=`hour`]]</p>
+        </div>
+
+
+        <div id="bottom_company">
+            <div class="item">
+                <div class="title">
+                  <a href="/company/">О компании</a>
+                </div>
+            </div>
+			<div class="item">
+                <div class="title">
+                  <a href="/novosti/">Новости</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="title">
+                  <a href="/chasto-zadavaemy-voprosy.html">Часто задаваемые вопросы</a>
+                </div>
+            </div>
+			<div class="item">
+                <div class="title">
+                  <a href="/kontakty.html">Контакты</a>
+                </div>
+            </div>
+        </div>
+		  <div id="bottom_social">
+			  <div id="bottom_social_title">Следите за новостями</div>
+			<div id="bottom_social_block">  
+            <div class="item_social">
+                <a href="#"><img src="/image/youtube.svg"></a>
+            </div>
+            <div class="item_social">
+                  <a href="#"><img src="/image/instagram.svg"></a>
+            </div>
+			<div class="item_social">
+                  <a href="#"><img src="/image/odnoklassniki.svg"></a>
+            </div>
+			<div class="item_social">
+                  <a href="#"><img src="/image/facebook.svg"></a>
+            </div>
+			<div class="item_social">
+                  <a href="#"><img src="/image/vk.svg"></a>
+            </div>
+			  </div>
+        </div>
+      </div>
+		<div id="bottom_company_footer">
+			<div class="domain_name">smachnaya.ru</div>
+			<div class="menu_info">
+				<ul>
+					<li>
+						<a href="#">Правила оказания услуг</a>
+					</li>
+					<li>
+						<a href="#">Пользовательское соглашение</a>
+					</li>
+					<li>
+						<a href="#">Политика обработки персональных данных</a>
+					</li>
+					<li>
+						<a href="#">Лицензионное соглашение</a>
+					</li>
+				</ul>
+			</div>
+			<div class="oplata_info">
+				<p>Мы принимаем к оплате</p>
+				<img src="/image/oplata.png">
+			</div>
+		</div>	
+      
+    </footer>
+
+<script>
+	
+	
+	
+	$(document).ready(function(){
+       $("#phone_zakaz").inputmask('+7 (999) 999-99-99');
+	   $(".input-dat.ks").inputmask('+7 (999) 999-99-99');
+   });
+	
+	
+	
+	document.getElementById('showPanel').addEventListener('click', function() {
+		document.getElementById('sidePanel').style.left = '0%';
+		document.getElementById('overlay').style.display = 'block';
+		document.body.classList.add('no-scroll');
+	});
+
+document.getElementById('closePanel').addEventListener('click', closePanel);
+document.getElementById('overlay').addEventListener('click', closePanel);
+
+function closePanel() {
+    document.getElementById('sidePanel').style.left = '-80%';
+    document.getElementById('overlay').style.display = 'none';
+    document.body.classList.remove('no-scroll');
+}
+</script>

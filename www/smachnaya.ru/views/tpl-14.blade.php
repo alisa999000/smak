@@ -1,0 +1,195 @@
+<?php
+/** Blade-обёртка шаблона из БД (site_templates.id=14). Рендер через evo_parser — теги Evo ([[*]], [[snippet]], {{chunk}}) как в админке. */
+$__body = <<<'_EVO_TPL_14_BODY_EOF_14_'
+<!DOCTYPE html>
+<html lang="ru">
+{{head}}
+
+
+<body>
+   {{header}} 
+<div class="container">
+[!FormLister?
+&formid=`profile`
+&exitTo=`16`	
+&controller=`Profile`
+&model=`Pathologic\EvolutionCMS\MODxAPI\modUsers`	
+&rules=`{
+    "email":{
+        "required":"Введите email",
+        "email":"Неверный email",
+        "custom":{
+            "function":"\\FormLister\\Profile::uniqueEmail",
+            "message":"Этот email уже использует другой пользователь"
+        }
+    },
+	"fullname":{
+        "required":"Введите имя пользователя",
+        "alphaNumeric":"Только буквы и цифры",
+    }
+}`
+&formTpl=`form_personal`
+&messagesOuterTpl=`@CODE:<div class="alert alert-danger" role="alert">[+messages+]</div>`
+&successTpl=`@CODE:<div class="text-center">Информация обновлена!</div>`
+&errorTpl=`@CODE:<span class="help-block">[+message+]</span>`
+!]
+	
+	
+	<div class="row row_lg hleb-cab" id="main_section">
+			   <div class="col-lg-12">
+			   	[[DLcrumbs?
+    &ownerTPL=`@CODE: <nav itemscope itemtype="https://schema.org/BreadcrumbList"><ul class="breadcrumps mb40" itemprop="itemListElement">[+crumbs.wrap+]</ul></nav>`
+    &tpl=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[+url+]" ><span itemprop="name">[+e.title+]</span></a></li>`
+    &tplCurrent=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[+e.title+]</span></li>`
+    &showCurrent=`1`
+]]
+			   </div>
+		
+		
+		<h1 class="tit-main">[*pagetitle*]</h1>
+		
+		
+		<div class="row block-data">
+			
+			<!--Личные данные -->
+			<div class="col-md-3">
+				<p class="bold">Контактное лицо</p>
+			</div>
+			<div class="col-md-7">
+				<form action="" method="post">
+					
+					<label for="otchestvo">Имя</label><br>
+					<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Имя" required>
+					<br><br>
+					<label for="otchestvo">Фамилия</label><br>
+					<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Фамилия" required>
+					<br><br>
+					<label for="otchestvo">Отчество</label><br>
+					<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Отчество" required>
+					<br>
+					
+					
+					<input class="submits" type="submit" name="update" value="Сохранить изменения">
+				</form>
+				
+				<div class="divider"></div>
+			</div>
+			
+			
+			<!-- Адрес --> 
+			<div class="col-md-3">
+				<p class="bold">Адрес</p>
+			</div>
+			
+			<div class="col-md-7">
+				<form action="" method="post">
+					
+					<div class="input-container">
+						<label for="dat">Улица</label><br>
+						<input class="input-dat s" type="text" name="street" placeholder="Например, Санкт-Петербург, улица Савушкина, 141" required>
+						<span class="icon"><img src="/assets/images/edit.svg" alt="svg"></span>
+					</div>
+					
+					<br><br>
+					
+					<div class="fl-phone">
+						<div class="phn">
+							<label for="dat">Квартира, Этаж</label><br>
+							<div class="fl-input">
+								<div><input class="input-dat sss" placeholder="Номер квартиры" type="tel"></div>
+								<div><input class="input-dat ssss" placeholder="Этаж" type="tel"></div>
+							</div>
+						</div>
+						<div class="kod">
+							<label for="dat">Подъезд, Код двери</label><br>
+							<div class="fl-input">
+								<div><input class="input-dat sss" placeholder="Подъезд" type="tel"></div>
+								<div><input class="input-dat ssss" placeholder="Код двери" type="tel"></div>
+							</div>
+						</div>
+					</div>
+					
+					
+					<input class="submits" type="submit" name="update" value="Сохранить изменения">
+				</form>
+				
+				<div class="divider"></div>
+			</div>
+			
+			
+			
+			
+			<!-- Банковские реквизиты -->
+			<div class="col-md-3">
+				<p class="bold">Банковские реквизиты</p>
+			</div>
+			
+			<div class="col-md-7">
+					<form action="" method="post">
+						
+						<label for="otchestvo">ИНН</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Например, lorem" required>
+						<br><br>
+						<label for="otchestvo">Банк</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Например, lorem" required>
+						<br><br>
+						<label for="otchestvo">Р/с (12 цифр)</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Например, lorem" required>
+						<br>
+						<label for="otchestvo">К/с (12 цифр)</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Например, lorem" required>
+						<br>
+						<label for="otchestvo">БИК (9 цифр)</label><br>
+						<input class="input-dat s" type="otchestvo" id="otchestvo" placeholder="Например, lorem" required>
+						<br>
+						
+					</form>
+				
+				
+				<div class="divider"></div>
+				
+				<br>
+				<p class="bold">Удалить учетную запись</p>
+				<p class="del-text">Это невозможно отменить. Все созданные вами данные будут удалены навсегда.</p>
+				<div class="del-but">Удалить</div>
+				
+			</div>
+			
+			
+			
+			
+		</div>
+		
+		
+		
+		
+
+	</div>
+	
+	
+	
+	
+	<script>
+		document.getElementById('changepass').addEventListener('click', function() {
+			const toggleBlock = document.getElementById('toggleBlocks');
+			const arrow = document.querySelector('.arr-bl');
+			
+			toggleBlock.classList.toggle('hiddens');
+			
+			if (toggleBlock.classList.contains('hiddens')) {
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+		});
+	</script>
+	
+	</div>
+	
+	{{footer}}
+	</body>
+</html>
+
+_EVO_TPL_14_BODY_EOF_14_;
+?>
+{!! evo_parser($__body) !!}

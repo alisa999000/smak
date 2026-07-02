@@ -1,0 +1,103 @@
+<form method="post" data-commerce-order="[+form_hash+]" class="order-form">
+  <div class="order-left">
+       <div class="order-container">
+       <input type="hidden" name="formid" value="order">
+       <div class="order-form-block">
+		   <div class="order-form-block-title">Личные данные</div> 
+		   <div class ="input_block">
+		   	<div class ="item_input_block">
+				<div class="order-form-caption">Имя</div>
+					<div class="form-group [+name.errorClass+][+name.requiredClass+]">
+						<input type="text" class="form-control order-form-input" placeholder="Ваше имя" name="name" value="[+name.value+]">
+						[+name.error+]
+					</div>
+			</div>
+			<div class ="item_input_block">
+				<div class="order-form-caption">Телефон*</div>
+					<div class="form-group [+phone.errorClass+][+phone.requiredClass+]">
+						<input type="text" class="form-control order-form-input order-form-input-error" id="phone_zakaz" placeholder="+  7 (___) __-__-___" name="phone" value="[+phone.value+]">					[+phone.error+]
+					</div>
+			</div>							
+		</div>
+		   </div>   
+		<div class="order-form-block">
+			<div class="order-form-block-title">Адрес доставки</div> 
+			<div class="input_block">
+		   	<div class ="item_input_block">
+				<div class="order-form-caption">Улица</div>
+					<div class="form-group ">
+						<input type="text" class="form-control order-form-input order-form-input-error"  placeholder="Улица" name="street" value="[+street.value+]">
+					</div>
+			</div>
+			<div class ="item_input_block_two">
+				<div class="order-form-caption">Квартира, Этаж</div>
+					<div class="form-group-two">
+						<input type="text" class="form-control order-form-input order-form-input-error"  placeholder="Квартира" name="city" value="[+city.value+]">
+						<input type="text" class="form-control order-form-input order-form-input-error"  placeholder="Этаж" name="city" value="[+city.value+]">
+					</div>
+			</div>
+			<div class ="item_input_block_two">
+				<div class="order-form-caption">Подъезд, Код двери</div>
+					<div class="form-group-two ">
+						<input type="text" class="form-control order-form-input order-form-input-error"  placeholder="Подъезд" name="city" value="[+city.value+]">
+						<input type="text" class="form-control order-form-input order-form-input-error"  placeholder="Код двери" name="city" value="[+city.value+]">
+					</div>
+			</div>
+			<div class ="item_input_block">
+				<div class="order-form-caption">Время доставки</div>
+					<div class="form-group ">
+						<input type="text" class="form-control order-form-input order-form-input-error"  placeholder="Время доставки" name="city" value="[+city.value+]">
+					</div>
+			</div>
+			<div class ="item_input_block">
+				<div class="order-form-caption">Комментарий</div>
+					<div class="form-group ">
+						<textarea type="text" class="form-control order-form-input order-form-input-error"  placeholder="Например, кто будет принимать заказ (Имя)" name="city" value="[+city.value+]"></textarea>
+					</div>
+			</div>
+			</div>
+		</div>  
+		<div class="order-form-block">
+		   <div class="order-form-block-title">Способ оплаты</div> 
+		   <div class ="input_block">
+		   	<div data-commerce-payments class="payment_block">
+        								[+payments+]
+									</div>
+									
+		</div> 
+		   </div>
+		   
+		   
+                          
+
+						</div>
+
+						
+
+					</div>
+
+		
+			
+			
+		
+		<div class="order-right">
+			
+			
+			
+			
+			
+			
+			<div class="cart_block_info">
+				[!Cart
+				&instance=`products`
+				&tpl=`cartrow_chek`
+				&tvList=`image, price`
+				&subtotalsRowTpl=`subtotalsRowTpl`
+				&ownerTPL=`cartwrap_chek`
+				!]
+				
+			</div>
+		</div>
+</form>
+
+

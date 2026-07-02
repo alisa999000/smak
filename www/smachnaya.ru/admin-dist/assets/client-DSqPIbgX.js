@@ -1,0 +1,1 @@
+import{a as o}from"./index-DhXgJQ-f.js";const t=o.create({baseURL:"/api",withCredentials:!0});async function s(a){const{data:i}=await t.post("/auth/login",{password:a});return i}async function r(){const{data:a}=await t.post("/admin/import/iiko");return a}export{r as i,s as l};

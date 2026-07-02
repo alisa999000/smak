@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{{head}}
+<body class="body-order header-absolute ">
+
+{{header}}
+	
+<div id="ajax-a">
+        <div class="ajax-b">
+<div class="container">
+        <div class="section_wr">
+        	<section class="section_offset">
+	<h1>[*pagetitle*]</h1>	
+	
+	<div class="order">
+			 [!Order
+    &formTpl=`orderformTpl`
+    &deliveryTpl=`deliveryTpl`
+    &deliveryRowTpl=`deliveryRowTpl`
+    &paymentsTpl=`paymentsTpl`
+    &paymentsRowTpl=`paymentsRowTpl`
+     &from=`grin.vadim2016@gmail.com`
+		    &successTpl=`@CODE:<div class="succes-order" style="width: auto;padding: 0 50px;margin-top: 160px;"><div class="title" style="font-size: 30px;font-weight: 700;line-height: 1.2;margin-bottom: 25px;">Спасибо!</div><p style="margin-bottom: 30px;">Ваша заявка оформлена. Мы скоро свяжемся с вами для уточнения деталей.</p></div>`
+		    &to=`grin.vadim2016@gmail.com`
+!]
+		
+
+				
+		
+	</div>
+	</section>
+	</div>
+</div>
+<!--ajax end-->
+		</div>
+		</div> <!--ajax end-->
+
+{{footer}}
+</body>
+</html>

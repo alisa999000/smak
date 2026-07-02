@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{head}}
+
+
+<body>
+   {{header}} 
+    <div class="container">
+		
+        <div class="top_slider">
+			[[multiTV?
+                    &tvName=`baner_home`
+                    &outerTpl=`@CODE:
+                        ((wrapper))`
+                    &rowTpl=`home_baner`
+                 
+                    ]]
+			
+        </div>
+    </div>
+    <div class="container">
+		<div class="data_day">
+			<div id="dates">
+
+			</div>
+			<a id="download-button" href="/assets/images/u-31482d980810e7197abd71b2f5f2a923.jpg" download>
+				<div id="icon"><img src="/image/download.svg"></div><span>Скачать меню на текущую неделю</span>
+			</a>
+		</div>
+        <div class="produkt_day">
+			
+			 [!DocLister?
+                                        &display=`50`
+										&orderBy=`[[filter_order]]`
+                                        &parents=`2`
+                                        &tvList=`image, price`
+                                        &renderTV=`image`
+                                        &tpl=`menu_day`
+                                        &depth=`10`
+                                        &noneTPL=`@CODE:<div class="col-12">Товаров нет</div>`
+                                        &tvSortType=`UNSIGNED`
+                                        &paginate=`pages`
+                                        &TplNextP=``
+                                        &TplPrevP=``
+                                        &TplPage=`@CODE: <li><a title="[+num+]" href="[+link+]" class="">[+num+]</a></li>`
+                                        &TplCurrentPage=`@CODE: <li><span>[+num+]</span></li>`
+                                        &TplWrapPaginate=`@CODE: <ul class="pagination d-flex justify-content-center justify-content-sm-start flex-wrap">[+wrap+]</ul>`
+                                        !]
+			
+			
+			
+			
+			
+            
+            <!--<div class="col-md-3">
+                <div class="item_produkt">
+                    <div class="item_produkt-img"><img src="/image/obed.jpg"></div>
+                    <div class="item_produkt_title">Комплексный обед «Выгодный»‎‎</div>
+                    <div class="item_produkt_desc">
+                        <ul>
+                            <li>Щи из свежей капусты с курицей 300 г</li>
+                            <li>Тефтели мясные с картофельным пюре 310 г</li>
+                            <li>Салат "Версаль" 150 г</li>
+                            <li>Пирожок печеный с яблоком 1/100гр.</li>
+                        </ul>
+                    </div>
+                    <div class="item_produkt_buy">
+                        <div class="item_produkt_price_block">
+                            <div class="item_produkt_price">299 ₽</div>
+                            <div class="item_produkt_teg"><span>Обед</span></div>
+                        </div>
+                        <div class="item_produkt_adcart">+<img src="/image/cart.png" alt=""></div>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="container">
+        <div class="promo_block row">
+            <div class="col-md-8">
+                <div class="promo_text">
+                    <div class="promo_text_title">Корпоративные обеды для компаний,фирм и офисов</div>
+                    <div class="promo_text_desc">Заказы принимаются в предыдущий заказу день до 18-00, корректировка принимается до 10-00 в день заказа. Доставка по всему городу. Доставка осуществляется с 11-18</div>
+                    <div class="promo_text_action" style="display:none;">Минимальный заказ от 1500₽</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="promo_slider">
+                    <div>
+						<div class="block_action">
+							<div class="block_data_action">Акция 19-20</div>
+							<div class="block_title_action">Заголовок Акции</div>
+							<div class="block_text_action">Какой то пояснительный текст акции, там сосиски по 2 рубля</div>
+						</div>
+                    </div>
+                    <div>
+						<div class="block_action">
+							<div class="block_data_action">Акция 28-30</div>
+							<div class="block_title_action">Заголовок Акции</div>
+							<div class="block_text_action">Какой то пояснительный текст акции, там сосиски по 6 рублей</div>
+						</div>
+                    </div>
+                    <div>
+						<div class="block_action">
+							<div class="block_data_action">Акция 14-30</div>
+							<div class="block_title_action">Заголовок Акции</div>
+							<div class="block_text_action">Какой то пояснительный текст акции, там сосиски по 10 рубля</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="komplex_block row">
+            <div class="col-md-6">
+                <div class="block_podbor">
+                	<div class="block_podbor_text_title">Собери свой комплекс</div>
+					<div class="block_podbor_text_desc">Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse.</div>
+					<div id="product-select">
+    <div class="select-group">
+        <label for="select1">Выбор 1:</label>
+        <select id="select1">
+            <option value="option1">Опция 1</option>
+            <option value="option2">Опция 2</option>
+        </select>
+    </div>
+
+    <div class="select-group">
+        <label for="select2">Выбор 2:</label>
+        <select id="select2">
+            <option value="option1">Опция 1</option>
+            <option value="option2">Опция 2</option>
+        </select>
+    </div>
+
+    <div class="select-group">
+        <label for="select3">Выбор 3:</label>
+        <select id="select3">
+            <option value="option1">Опция 1</option>
+            <option value="option2">Опция 2</option>
+        </select>
+    </div>
+
+    <div class="select-group">
+        <label for="select4">Выбор 4:</label>
+        <select id="select4">
+            <option value="option1">Опция 1</option>
+            <option value="option2">Опция 2</option>
+        </select>
+    </div>
+
+    <button id="buy-button">Купить</button>
+</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="block_podbor_text">
+					<div class="block_podbor_text_title">Заголовок что</div>
+					<div class="block_podbor_text_desc">Пояснительный зекст Зачем dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="opros_block">
+			
+            <div class="opros_block_title">Рассчитайте свою персональную скидку</div>
+			<div class="opros_block_desc">Пройдите короткий опрос и узнайте стоимость обедов для всей компании</div>
+			<button id="button_opros">Начать</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="seo_text">
+            <h1>SEO Текст</h1>
+            Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. Lectus mi risus bibendum nulla sed in purus. Molestie habitant arcu massa habitasse ullamcorper cursus turpis parturient egestas. Nulla eu amet diam tellus egestas. Placerat in fusce sed iaculis ultricies diam. Mattis amet enim elit eu malesuada orci velit massa.
+            Lorem ipsum dolor sit amet consectetur.
+            Ultricies metus ac tellus nisl enim suspendisse.
+            Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet.
+            In neque molestie nibh arcu mattis massa.
+            Lectus mi risus bibendum nulla sed in purus.
+            Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. Lectus mi risus bibendum nulla sed in purus. Molestie habitant arcu massa habitasse ullamcorper cursus turpis parturient egestas. Nulla eu amet diam tellus egestas. Placerat in fusce sed iaculis ultricies diam. Mattis amet enim elit eu malesuada orci velit massa.
+            Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. Lectus mi risus bibendum nulla sed in purus. Molestie habitant arcu massa habitasse ullamcorper cursus turpis parturient egestas. Nulla eu amet diam tellus egestas. Placerat in fusce sed iaculis ultricies diam. Mattis amet enim elit eu malesuada orci velit massa.
+        </div>
+    </div>
+    <div class="container">
+        <div class="feadback_block">
+            <div class="feadback_blcok_title">Lorem ipsum свою персональную скидку</div>
+            <div class="feadback_blcok_desc">Пояснительный текст ....ть обедов для всей компании</div>
+            <form id="feadback_form">
+				<div class="form-group">
+					<label for="people">Кол-во человек:</label>
+					<select id="people">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<!-- продолжайте до 10 -->
+						<option value="10">10</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label for="name">Ваше имя:</label>
+					<input type="text" id="name" placeholder="Ваше имя">
+				</div>
+
+				<div class="form-group">
+					<label for="phone">Ваш номер телефона:</label>
+					<input type="tel" id="phone" placeholder="Ваш номер телефона">
+				</div>
+
+				<div class="form-group">
+					<button type="submit">Заказать обед</button>
+				</div>
+			</form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="faq_block">
+            <div class="faq_blcok_title">Часто задаваемые вопросы</div>
+            <div class="container_que">
+                <div class="question">
+                    Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse?
+                </div>
+                <div class="answercont" style="max-height: 0px;">
+                    <div class="answer">
+                     Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. Lectus mi risus bibendum nulla sed in purus. Molestie habitant arcu massa habitasse ullamcorper cursus turpis parturient egestas. Nulla eu amet diam tellus egestas. Placerat in fusce sed iaculis ultricies diam.
+                    </div>
+                </div>
+            </div>
+            <div class="container_que">
+                <div class="question">
+                    Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse?
+                </div>
+                <div class="answercont" style="max-height: 0px;">
+                    <div class="answer">
+                Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. Lectus mi risus bibendum nulla sed in purus. Molestie habitant arcu massa habitasse ullamcorper cursus turpis parturient egestas. Nulla eu amet diam tellus egestas. Placerat in fusce sed iaculis ultricies diam.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="container">
+		<div class="info-block">
+			<div class="image-container">
+				<img src="/image/kafe.jpg" alt="Описание изображения">
+			</div>
+			<div class="text-container">
+				<img src="/image/happyday.png" alt="Описание изображения">
+				<div class="text-container-info">
+					<p>Ул. Планерная 59А, ТК Leomoll</p>
+					<p>Ежедневно с 21:00 до 22:00 горячая распродажа <span>Скидка -50%</span>   На все меню</p>
+				</div>	
+			</div>
+		</div>
+	</div>
+  {{footer}}
+    <script>
+    $('.promo_slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+    });
+    </script>
+
+    <script>
+     // Функция для форматирования даты в строку DD Month
+function formatDate(date) {
+    var dd = String(date.getDate()).padStart(2, '0');
+    var mm = date.getMonth(); 
+    var months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+    var monthName = months[mm];
+
+    return dd + ' ' + monthName;
+}
+		
+function formatDateAjax(date) {
+    var day = date.getDate(); // день
+    var month = date.getMonth() + 1; // месяцы считаются с 0 в JavaScript
+    var year = date.getFullYear(); // год
+
+    // Если день или месяц меньше 10, добавляем в начало "0"
+    if (day < 10) day = '0' + day;
+    if (month < 10) month = '0' + month;
+
+    return day + '.' + month + '.' + year;
+}	
+
+// Создание элемента загрузчика
+function createLoader() {
+    var loader = document.createElement("div");
+    loader.style.position = "fixed";
+    loader.style.top = "0";
+    loader.style.right = "0";
+    loader.style.bottom = "0";
+    loader.style.left = "0";
+    loader.style.background = "rgba(0,0,0,0.5)";
+    loader.style.display = "flex";
+    loader.style.justifyContent = "center";
+    loader.style.alignItems = "center";
+    loader.style.zIndex = "10000";
+    loader.innerHTML = '<div class="loader"></div>';
+    loader.id = "loader";
+
+    var spinner = document.createElement("div");
+    spinner.style.border = "16px solid #f3f3f3";
+    spinner.style.borderTop = "16px solid #517B39";
+    spinner.style.borderRadius = "50%";
+    spinner.style.width = "100px";
+    spinner.style.height = "100px";
+    spinner.style.animation = "spin 2s linear infinite";
+    spinner.className = "spinner";
+
+    loader.appendChild(spinner);
+
+    document.body.appendChild(loader);
+
+    var style = document.createElement('style');
+    style.innerHTML = `
+        .spinner {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #517B39;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Удаление элемента загрузчика
+function removeLoader() {
+    var loader = document.getElementById("loader");
+    loader.remove();
+}
+		
+function updateSelectOptions(data) {
+    var selectIndex = 1;
+    for (var sectionName in data) {
+        var selectElement = document.getElementById('select' + selectIndex);
+        if (selectElement) {
+            selectElement.innerHTML = '';  // очистка текущего содержимого
+            data[sectionName].forEach(function(item) {
+                var option = document.createElement('option');
+                option.value = item.value;
+                option.textContent = item.text;
+                selectElement.appendChild(option);
+            });
+        }
+        selectIndex++;
+    }
+}
+		
+
+// Получить даты
+var yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+var today = new Date();
+var dates = [yesterday, today];
+for (var i = 1; i <= 5; i++) {
+    var date = new Date();
+    date.setDate(today.getDate() + i);
+    dates.push(date);
+}
+
+// Вставить даты в HTML
+var datesDiv = document.getElementById('dates');
+dates.forEach(function(date, i) {
+    var dateDiv = document.createElement('div');
+    dateDiv.className = 'date';
+    if (i === 2) {
+        dateDiv.classList.add('selected');
+		
+		// Загрузить содержимое AJAX'ом
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'menu-day.html?date=' + formatDateAjax(date));
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                document.querySelector('.produkt_day').innerHTML = xhr.responseText;
+				
+            } else {
+                console.error('Ошибка при загрузке данных: ' + xhr.status);
+            }
+        };
+        xhr.send();
+    }
+    dateDiv.textContent = formatDate(date);
+	
+	
+   dateDiv.addEventListener('click', function() {
+    // Обновить стиль выбранной даты
+    document.querySelector('.date.selected').classList.remove('selected');
+    this.classList.add('selected');
+    createLoader();
+
+    // Загрузить содержимое AJAX'ом для продукта дня
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'menu-day.html?date=' + formatDateAjax(date));
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            document.querySelector('.produkt_day').innerHTML = xhr.responseText;
+
+            // После того как продукт дня загружен, начинаем загрузку продуктов
+            var productsXhr = new XMLHttpRequest();
+            productsXhr.open('GET', 'set_day.html?date=' + formatDateAjax(date));
+            productsXhr.onload = function() {
+                if (productsXhr.status === 200) {
+                    var productsData = JSON.parse(productsXhr.responseText);
+                    updateSelectOptions(productsData);
+                } else {
+                    console.error('Ошибка при загрузке продуктов: ' + productsXhr.status);
+                }
+                removeLoader();  // Удалить анимацию загрузки только после завершения обоих запросов
+            };
+            productsXhr.send();
+        } else {
+            console.error('Ошибка при загрузке данных: ' + xhr.status);
+            removeLoader();
+        }
+    };
+    xhr.send();
+});
+
+datesDiv.appendChild(dateDiv);
+	
+});
+	</script>
+	<script>
+		var today = document.querySelector('.date.selected');
+	today.innerHTML += ' (завтра)';
+	</script>
+	<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((question) => {
+        question.addEventListener('click', (event) => {
+            const activeQuestion = document.querySelector('.question.active');
+            if(activeQuestion && activeQuestion!==question){
+                activeQuestion.classList.remove('active');
+                activeQuestion.nextElementSibling.style.maxHeight = 0;
+            }
+
+            question.classList.toggle('active');
+            
+            const answer = question.nextElementSibling;
+            if (question.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
+	
+		
+</body>
+<script>
+		/*$(document).on('cart-add-complete.commerce', function(e, params) {
+			console.log(params);
+			Toastify({
+
+				text: ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"" ,
+
+				duration: 1000,
+				 className: "info",
+				style: {
+				
+				background: "linear-gradient(90deg, rgb(81 123 57) 0%, rgb(60 101 37) 56%, rgb(38 79 15) 100%)",
+					
+					
+				},
+
+				}).showToast();
+
+				});*/
+	       		$(document).on('cart-add-complete.commerce', function (e, params) {
+				var instance = params.data.instance;
+				switch (instance) {
+					case 'wishlist':
+						var growlText = ""+params.response.name+" добавлен в избранное";
+						var growlLink = "/favorites";
+						break;
+					case 'products':
+					default:
+						var growlText = ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"";
+						var growlLink = "/cart";
+						break;
+				}
+				Toastify({
+					text: growlText,
+					destination: growlLink,
+					duration: 1000,
+				 	className: "info",
+					style: {
+						background: "linear-gradient(90deg, rgb(81 123 57) 0%, rgb(60 101 37) 56%, rgb(38 79 15) 100%)",
+					},
+					}).showToast();
+				});
+	</script>
+</html>

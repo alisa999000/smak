@@ -1,0 +1,26 @@
+{
+    "generatedAtUtc":  "2026-04-27T16:12:00Z",
+    "correlationIds":  {
+                           "token":  "af7ed007-4666-4926-a000-b22da3675cd2",
+                           "organizations":  "9cde5548-766a-4e4d-b569-a28b4f46e0e5",
+                           "nomenclature":  "8e2233bd-9387-4f51-9b64-fff785b4beb8",
+                           "menu":  "a9d3da9e-c349-4daf-b9fb-ca8e9e249789"
+                       },
+    "counts":  {
+                   "groups":  8,
+                   "productsAll":  79,
+                   "productsUsable":  72,
+                   "weekdayGroupMatches":  0,
+                   "externalMenus":  0,
+                   "priceCategories":  0
+               },
+    "menuResponse":  {
+                         "correlationId":  "a9d3da9e-c349-4daf-b9fb-ca8e9e249789",
+                         "externalMenus":  [
+
+                                           ],
+                         "priceCategories":  [
+
+                                             ]
+                     }
+}

@@ -1,0 +1,134 @@
+{
+  "generatedAtUtc": "2026-04-22T08:20:59Z",
+  "baseUrl": "https://api-ru.iiko.services",
+  "organizationId": "e1ed1ab2-a293-49f3-bb75-ee836bff98ca",
+  "requests": [
+    {
+      "name": "access_token",
+      "method": "POST",
+      "path": "/api/1/access_token",
+      "requestBody": {
+        "apiLogin": "1215cf645f0940edb5d3dba8a8a3cf0d"
+      },
+      "httpStatus": 200,
+      "responseBody": {
+        "correlationId": "84e33835-29e1-465a-98f8-ef41cc4ec811",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBcGlMb2dpbklkIjoiNzZkNjFiYWEtZmNmYi00ZDQ0LWJiYjQtN2NjMjliZTg0NGQ3IiwibmJmIjoxNzc2ODQ2MDE1LCJleHAiOjE3NzY4NDk2MTUsImlhdCI6MTc3Njg0NjAxNSwiaXNzIjoiaWlrbyIsImF1ZCI6ImNsaWVudHMifQ.E7cxuGchl4LLOp0B_GiRc7FKJG2rlnMnfRyyCpR3jTw"
+      }
+    },
+    {
+      "name": "organizations",
+      "method": "POST",
+      "path": "/api/1/organizations",
+      "requestBody": {
+        "returnAdditionalInfo": true
+      },
+      "httpStatus": 200,
+      "responseBody": {
+        "correlationId": "37088d9b-b985-480e-9996-703fe753217a",
+        "organizations": [
+          {
+            "responseType": "Extended",
+            "country": "Россия",
+            "restaurantAddress": "Санкт-Петербург и область, Санкт-Петербург,  ул Планерная д 59 литера А",
+            "latitude": 60.0223301,
+            "longitude": 30.2252778,
+            "useUaeAddressingSystem": false,
+            "version": "9.3.6065.0.1755770209314",
+            "currencyIsoName": "RUB",
+            "currencyMinimumDenomination": 0.0,
+            "countryPhoneCode": "7",
+            "marketingSourceRequiredInDelivery": false,
+            "defaultDeliveryCityId": "80170962-38a8-46e0-9d4b-a853058754a0",
+            "deliveryCityIds": [
+              "80170962-38a8-46e0-9d4b-a853058754a0"
+            ],
+            "deliveryServiceType": "CourierAndSelfService",
+            "deliveryOrderPaymentSettings": "WhenOrderOnTheWay",
+            "defaultCallCenterPaymentTypeId": "09322f46-578a-d210-add7-eec222a08871",
+            "orderItemCommentEnabled": false,
+            "inn": "",
+            "addressFormatType": "Legacy",
+            "isConfirmationEnabled": false,
+            "confirmAllowedIntervalInMinutes": 1440,
+            "isCloud": true,
+            "isAnonymousGuestsAllowed": true,
+            "addressLookup": [
+              "DaData"
+            ],
+            "id": "e1ed1ab2-a293-49f3-bb75-ee836bff98ca",
+            "name": "Кафе \"Смачная точка\"",
+            "code": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "nomenclature",
+      "method": "POST",
+      "path": "/api/1/nomenclature",
+      "requestBody": {
+        "organizationId": "e1ed1ab2-a293-49f3-bb75-ee836bff98ca",
+        "startRevision": 0
+      },
+      "httpStatus": 200,
+      "responseBody": {
+        "correlationId": "7a0fa1fa-e570-474a-9a2c-3fad55ae4104",
+        "groups": [],
+        "productCategories": [
+          {
+            "id": "04d52265-cff8-acaa-0196-400d9203a30f",
+            "name": "ДОСТАВКА",
+            "isDeleted": false
+          }
+        ],
+        "products": [],
+        "sizes": [],
+        "revision": 1671547341561
+      }
+    },
+    {
+      "name": "menu_v2",
+      "method": "POST",
+      "path": "/api/2/menu",
+      "requestBody": {
+        "organizationId": "e1ed1ab2-a293-49f3-bb75-ee836bff98ca"
+      },
+      "httpStatus": 200,
+      "responseBody": {
+        "correlationId": "34b39f9d-6b52-49ee-892b-deeb50ef9fac",
+        "externalMenus": [],
+        "priceCategories": []
+      }
+    },
+    {
+      "name": "terminal_groups",
+      "method": "POST",
+      "path": "/api/1/terminal_groups",
+      "requestBody": {
+        "organizationIds": [
+          "e1ed1ab2-a293-49f3-bb75-ee836bff98ca"
+        ]
+      },
+      "httpStatus": 200,
+      "responseBody": {
+        "correlationId": "e11a5dab-8c3c-46d2-a7ad-c8d2910618a7",
+        "terminalGroups": [
+          {
+            "organizationId": "e1ed1ab2-a293-49f3-bb75-ee836bff98ca",
+            "items": [
+              {
+                "id": "6577f585-2e80-b37c-0185-2fe4a1050064",
+                "organizationId": "e1ed1ab2-a293-49f3-bb75-ee836bff98ca",
+                "name": "Кафе \"Смачная точка\"",
+                "address": "",
+                "timeZone": "00:00:00"
+              }
+            ]
+          }
+        ],
+        "terminalGroupsInSleep": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+# Локальная среда.
+# Основной backend: menu-crm (Next.js + Prisma) — порт 3105.
+# Legacy MODX (mysql + web) — только для одноразового import:modx.
+
+services:
+  menu-crm:
+    build:
+      context: ../menu-crm
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    restart: unless-stopped
+    ports:
+      - "${MENU_CRM_PORT:-3105}:3105"
+    environment:
+      DATABASE_URL: file:/app/data/prod.db
+      ADMIN_PASSWORD: ${MENU_CRM_ADMIN_PASSWORD:-change-me}
+      COOKIE_SECRET: ${MENU_CRM_COOKIE_SECRET:-change-me-cookie-secret}
+      PUBLIC_API_KEY: ${MENU_CRM_PUBLIC_API_KEY:-change-me-api-key}
+      IIKO_API_BASE: ${IIKO_API_BASE:-https://api-ru.iiko.services}
+      IIKO_API_LOGIN: ${IIKO_API_LOGIN:-}
+      IIKO_ORGANIZATION_ID: ${IIKO_ORGANIZATION_ID:-}
+      SITE_URL: ${SITE_URL:-http://127.0.0.1:5173}
+    volumes:
+      - menu_crm_sqlite:/app/data
+
+  # Legacy — только для npm run import:modx
+  mysql:
+    profiles: ["legacy-modx"]
+    image: mysql:5.7
+    platform: linux/amd64
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-localroot}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-smachnay}
+      MYSQL_USER: ${MYSQL_USER:-smachnay}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-smachnay}
+    ports:
+      - "${MYSQL_PORT:-3307}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ../u2071240_smachnay.sql:/docker-entrypoint-initdb.d/001_dump.sql:ro
+
+  web:
+    profiles: ["legacy-modx"]
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    platform: linux/amd64
+    restart: unless-stopped
+    ports:
+      - "${WEB_PORT:-8090}:80"
+    volumes:
+      - ../www/smachnaya.ru:/var/www/html
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  mysql_data:
+  menu_crm_sqlite:

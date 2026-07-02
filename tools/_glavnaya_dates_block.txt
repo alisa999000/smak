@@ -1,0 +1,258 @@
+ontainer">
+				<img src="/image/kafe.jpg" alt="Описание изображения">
+			</div>
+			<div class="text-container">
+				<img src="/image/happyday.png" alt="Описание изображения">
+				<div class="text-container-info">
+					<p>Ул. Планерная 59А, ТК Leomoll</p>
+					<p>Ежедневно с 21:00 до 22:00 горячая распродажа <span>Скидка -50%</span>   На все меню</p>
+				</div>	
+			</div>
+		</div>
+	</div>
+  {{footer}}
+    <script>
+    $('.promo_slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+    });
+    </script>
+
+    <script>
+     // Функция для форматирования даты в строку DD Month
+function formatDate(date) {
+    var dd = String(date.getDate()).padStart(2, '0');
+    var mm = date.getMonth(); 
+    var months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+    var monthName = months[mm];
+
+    return dd + ' ' + monthName;
+}
+		
+function formatDateAjax(date) {
+    var day = date.getDate(); // день
+    var month = date.getMonth() + 1; // месяцы считаются с 0 в JavaScript
+    var year = date.getFullYear(); // год
+
+    // Если день или месяц меньше 10, добавляем в начало "0"
+    if (day < 10) day = '0' + day;
+    if (month < 10) month = '0' + month;
+
+    return day + '.' + month + '.' + year;
+}	
+
+// Создание элемента загрузчика
+function createLoader() {
+    var loader = document.createElement("div");
+    loader.style.position = "fixed";
+    loader.style.top = "0";
+    loader.style.right = "0";
+    loader.style.bottom = "0";
+    loader.style.left = "0";
+    loader.style.background = "rgba(0,0,0,0.5)";
+    loader.style.display = "flex";
+    loader.style.justifyContent = "center";
+    loader.style.alignItems = "center";
+    loader.style.zIndex = "10000";
+    loader.innerHTML = '<div class="loader"></div>';
+    loader.id = "loader";
+
+    var spinner = document.createElement("div");
+    spinner.style.border = "16px solid #f3f3f3";
+    spinner.style.borderTop = "16px solid #517B39";
+    spinner.style.borderRadius = "50%";
+    spinner.style.width = "100px";
+    spinner.style.height = "100px";
+    spinner.style.animation = "spin 2s linear infinite";
+    spinner.className = "spinner";
+
+    loader.appendChild(spinner);
+
+    document.body.appendChild(loader);
+
+    var style = document.createElement('style');
+    style.innerHTML = `
+        .spinner {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #517B39;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Удаление элемента загрузчика
+function removeLoader() {
+    var loader = document.getElementById("loader");
+    loader.remove();
+}
+		
+function updateSelectOptions(data) {
+    var selectIndex = 1;
+    for (var sectionName in data) {
+        var selectElement = document.getElementById('select' + selectIndex);
+        if (selectElement) {
+            selectElement.innerHTML = '';  // очистка текущего содержимого
+            data[sectionName].forEach(function(item) {
+                var option = document.createElement('option');
+                option.value = item.value;
+                option.textContent = item.text;
+                selectElement.appendChild(option);
+            });
+        }
+        selectIndex++;
+    }
+}
+		
+
+// Получить даты
+var yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+var today = new Date();
+var dates = [yesterday, today];
+for (var i = 1; i <= 5; i++) {
+    var date = new Date();
+    date.setDate(today.getDate() + i);
+    dates.push(date);
+}
+
+// Вставить даты в HTML
+var datesDiv = document.getElementById('dates');
+dates.forEach(function(date, i) {
+    var dateDiv = document.createElement('div');
+    dateDiv.className = 'date';
+    if (i === 2) {
+        dateDiv.classList.add('selected');
+		
+		// Загрузить содержимое AJAX'ом
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'menu-day.html?date=' + formatDateAjax(date));
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                document.querySelector('.produkt_day').innerHTML = xhr.responseText;
+				
+            } else {
+                console.error('Ошибка при загрузке данных: ' + xhr.status);
+            }
+        };
+        xhr.send();
+    }
+    dateDiv.textContent = formatDate(date);
+	
+	
+   dateDiv.addEventListener('click', function() {
+    // Обновить стиль выбранной даты
+    document.querySelector('.date.selected').classList.remove('selected');
+    this.classList.add('selected');
+    createLoader();
+
+    // Загрузить содержимое AJAX'ом для продукта дня
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'menu-day.html?date=' + formatDateAjax(date));
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            document.querySelector('.produkt_day').innerHTML = xhr.responseText;
+
+            // После того как продукт дня загружен, начинаем загрузку продуктов
+            var productsXhr = new XMLHttpRequest();
+            productsXhr.open('GET', 'set_day.html?date=' + formatDateAjax(date));
+            productsXhr.onload = function() {
+                if (productsXhr.status === 200) {
+                    var productsData = JSON.parse(productsXhr.responseText);
+                    updateSelectOptions(productsData);
+                } else {
+                    console.error('Ошибка при загрузке продуктов: ' + productsXhr.status);
+                }
+                removeLoader();  // Удалить анимацию загрузки только после завершения обоих запросов
+            };
+            productsXhr.send();
+        } else {
+            console.error('Ошибка при загрузке данных: ' + xhr.status);
+            removeLoader();
+        }
+    };
+    xhr.send();
+});
+
+datesDiv.appendChild(dateDiv);
+	
+});
+	</script>
+	<script>
+		var today = document.querySelector('.date.selected');
+	today.innerHTML += ' (завтра)';
+	</script>
+	<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((question) => {
+        question.addEventListener('click', (event) => {
+            const activeQuestion = document.querySelector('.question.active');
+            if(activeQuestion && activeQuestion!==question){
+                activeQuestion.classList.remove('active');
+                activeQuestion.nextElementSibling.style.maxHeight = 0;
+            }
+
+            question.classList.toggle('active');
+            
+            const answer = question.nextElementSibling;
+            if (question.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
+	
+		
+</body>
+<script>
+		/*$(document).on('cart-add-complete.commerce', function(e, params) {
+			console.log(params);
+			Toastify({
+
+				text: ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"" ,
+
+				duration: 1000,
+				 className: "info",
+				style: {
+				
+				background: "linear-gradient(90deg, rgb(81 123 57) 0%, rgb(60 101 37) 56%, rgb(38 79 15) 100%)",
+					
+					
+				},
+
+				}).showToast();
+
+				});*/
+	       		$(document).on('cart-add-complete.commerce', function (e, params) {
+				var instance = params.data.instance;
+				switch (instance) {
+					case 'wishlist':
+						var growlText = ""+params.response.name+" добавлен в избранное";
+						var growlLink = "/favorites";
+						break;
+					case 'products':
+					default:
+						var growlText = ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"";
+						var growlLink = "/cart";
+						break;
+				}
+				Toastify({
+					text: growlText,
+					destination: growlLink,
+					duration: 1000,
+				 	className: "info",
+					style: {
+						background: "linear-gradient(90deg, rgb(81 123 57) 0%, 

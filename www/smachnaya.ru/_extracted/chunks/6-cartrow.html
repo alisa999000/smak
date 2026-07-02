@@ -1,0 +1,51 @@
+<div data-id="[+id+]" data-commerce-row="[+row+]" class="item_card">
+						<div class="td-image">
+							<a href="[+url+]" class="image">
+								<img src="[+tv.image+]" class="img-fluid" alt="[+e.title+]" >
+							</a>
+						</div>
+						<div class="td-info">
+							<div class="item">
+								<!--<div class="text">Рабочий стол</div>-->
+								<div class="title">
+									<a href="[+url+]">[+name+]</a>
+								</div>
+								<ul class="params">
+								    <li>
+										<div class="params-label">Доставка на [+options.material+]</div>
+										
+									</li>
+									
+									
+								</ul>
+								<!--<div class="link">
+									<a href="[+url+]">Редактировать</a>
+								</div>-->
+							</div>
+						</div>
+						<div class="td-price sab">
+							<div class="action">
+								<div class="price">
+									[[PriceFormat? &price=`[+tv.price+]`  &convert=`1`]]
+								</div>
+								
+							</div>
+						</div>
+						<div class="td-counter">
+							<div class="counter" data-toggle="counter">
+								<input type="text" name="count" class="counter-input" value="[+count+]" data-commerce-action="recount" data-counter-input  />
+								<div class="counter-btn counter-btn-prev" data-commerce-action="decrease" >&minus;</div>
+								<div class="counter-btn counter-btn-next" data-commerce-action="increase" >&plus;</div>
+							</div>
+						</div>
+						<div class="td-price">
+							<div class="action">
+								<div class="price">
+									[[PriceFormat? &price=`[+total+]`  &convert=`1`]]
+									
+								</div>
+								
+							</div>
+						</div>
+						<div class="td-delite"><a href="javascript:void(0)" data-commerce-action="remove" class="remove"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="none"><path fill="#D03B1D" fill-rule="evenodd" d="M15.978 6.72a.746.746 0 0 1 .671.808c-.006.068-.534 6.779-.839 9.594-.189 1.747-1.314 2.81-3.013 2.842a182.852 182.852 0 0 1-7.664-.006c-1.63-.033-2.759-1.117-2.943-2.83-.307-2.84-.833-9.533-.838-9.6a.744.744 0 0 1 .67-.808.757.757 0 0 1 .788.687c.003.043.218 2.777.452 5.482l.047.54c.118 1.344.238 2.635.335 3.535.104.973.616 1.475 1.52 1.494 2.437.053 4.925.056 7.607.006.96-.02 1.478-.511 1.585-1.507.303-2.794.83-9.482.835-9.55a.753.753 0 0 1 .787-.687ZM11.064 0c.895 0 1.682.62 1.913 1.506l.248 1.261c.08.413.434.715.843.722h3.2c.404 0 .732.336.732.75s-.328.75-.731.75h-3.172a.73.73 0 0 1-.015 0H.731A.741.741 0 0 1 0 4.24c0-.414.328-.75.731-.75h3.2l.098-.007a.889.889 0 0 0 .747-.715l.237-1.216C5.253.62 6.04.001 6.936.001h4.128Zm0 1.5H6.936a.518.518 0 0 0-.5.392l-.227 1.17c-.028.148-.07.291-.124.427h5.83a2.437 2.437 0 0 1-.125-.427l-.237-1.216c-.05-.185-.255-.346-.49-.346Z" clip-rule="evenodd"/></svg></a></div>
+					</div>

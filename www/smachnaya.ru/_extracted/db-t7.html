@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{head}}
+
+
+<body>
+   {{header}} 
+<div class="container">
+[!FormLister?
+&formid=`register`
+&controller=`Register`
+&model=`Pathologic\EvolutionCMS\MODxAPI\modUsers`	
+
+&rules=`{
+    "fullname": {
+        "required": "Обязательно введите имя"
+    },
+    "email": {
+        "required": "Обязательно введите email",
+        "email": "Введите email правильно"
+    },
+    "password": {
+        "required": "Обязательно введите пароль",
+        "minLength": {
+            "params": 6,
+            "message": "В пароле должно быть больше 6 символов"
+        }
+    },
+    "repeatPassword": {
+        "required": "Повторите пароль",
+        "equals": {
+            "message": "Пароли не совпадают"
+        }
+    }
+}`
+&allowedFields=`fullname`
+&formControls=`agree`
+&formTpl=`@CODE:
+
+        <div class="account_form">
+            <form method="post">
+                <input type="hidden" name="formid" value="register">
+                <div class="form-group[+fullname.errorClass+][+fullname.requiredClass+]">
+                    <label for="fullname">* Имя</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="Имя" name="fullname" value="[+fullname.value+]">
+                    [+fullname.error+]
+                </div>
+                <div class="form-group[+email.errorClass+][+email.requiredClass+]">
+                    <label for="email">* Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="[+email.value+]">
+                    [+email.error+]
+                </div>
+                
+                        <div class="form-group[+password.errorClass+][+password.requiredClass+]">
+                            <label for="password">* Пароль</label>
+                            <input type="password" class="form-control" id="password" placeholder="Пароль" name="password" value="">
+                            [+password.error+]
+                        </div>
+                    
+                        <div class="form-group[+repeatPassword.errorClass+][+repeatPassword.requiredClass+]">
+                            <label for="repeatPassword">* Повторите пароль</label>
+                            <input type="password" class="form-control" id="repeatPassword" placeholder="Повторите пароль" name="repeatPassword" value="">
+                            [+repeatPassword.error+]
+                        </div>
+                    
+                
+                [+form.messages+]
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary "> Зарегистрироваться</button>
+                </div>
+            </form>
+        </div>`
+&to=`info@sitename.ru`
+&reportTpl=`@CODE:Новый пользователь [+fullname.value+] ([+id.value+])`
+&ccSender=`1`
+&ccSenderField=`email`
+&ccSenderTpl=`@CODE:Привет [+fullname.value+]. Для активации учетной записи нужно перейти по ссылке <a href="[+activate.url+]">[+activate.url+]</a>`
+&subject=`Регистрация на сайте [(site_name)]`
+&messagesOuterTpl=`@CODE:<div class="alert alert-danger" role="alert">[+messages+]</div>`
+&successTpl=`@CODE:
+<p>Поздравляем с успешной регистрацией, [+fullname.value+]!</p>
+<p>После активации вы можете <a href="[~233~]">авторизоваться</a> на сайте.</p>
+<p>Если вы не получили письмо для активации учетной записи, <a href="[~3~]">запросите его</a> еще раз.</p>`
+&errorTpl=`@CODE:<span class="help-block">[+message+]</span>`
+&errorClass=` has-error`
+&requiredClass=` has-warning`
+!]
+	</div>
+	</body>
+</html>

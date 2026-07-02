@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{{head}}
+<body class="body-cart header-absolute">
+
+{{header}}
+<div id="ajax-a">
+        <div class="ajax-b">
+<div class="container">	
+	    [[DLcrumbs?
+    &ownerTPL=`@CODE: <nav itemscope itemtype="https://schema.org/BreadcrumbList"><ul class="breadcrumps mb40">[+crumbs.wrap+]</ul></nav>`
+    &tpl=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><meta itemprop="position" content="[+iteration+]"><a itemprop="item" href="[+url+]" ><span itemprop="name">[+e.title+]</span></a></li>`
+    &tplCurrent=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><meta itemprop="position" content="[+iteration+]"><span itemprop="name">[+e.title+]</span></li>`
+    &showCurrent=`1`
+]]
+	<h1>[*pagetitle*]</h1>	
+	
+	
+<div class="content">
+	
+	
+	
+			[!search!]
+	
+	</div>
+</div>	
+	<!--ajax end-->
+		</div>
+		</div> <!--ajax end-->
+{{footer}}	
+</body>
+</html>

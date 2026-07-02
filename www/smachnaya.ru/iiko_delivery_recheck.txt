@@ -1,0 +1,18 @@
+﻿ПОВТОРНАЯ ПРОВЕРКА IIKO
+======================
+UTC: 2026-04-22T14:24:30Z
+
+CorrelationIds:
+ token: 87c900b8-d613-4f9d-bbe0-9d6e56223759
+ organizations: ca54e07d-04c6-48c3-b60b-f5b59135882a
+ nomenclature: b8d56420-600f-4b1a-ae0f-75317f28497a
+ menu: 1aac294c-ecc6-41c5-a46a-a5d45bffe02c
+
+Counts:
+ groups=8
+ productsAll=79
+ productsUsable=72
+ deliveryCandidates=0
+ weekdayGroupMatches=0
+ externalMenus=0
+ priceCategories=0

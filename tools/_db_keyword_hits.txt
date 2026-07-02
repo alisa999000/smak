@@ -1,0 +1,9 @@
+substring 'кабинет' appears somewhere in dump
+substring 'личн' appears somewhere in dump
+substring 'регистрац' appears somewhere in dump
+substring 'авторизац' appears somewhere in dump
+substring 'kabinet' appears somewhere in dump
+substring 'lk' appears somewhere in dump
+substring 'evocms-user' appears somewhere in dump
+substring 'data-evocms-user' appears somewhere in dump
+substring 'commerce_orders' appears somewhere in dump

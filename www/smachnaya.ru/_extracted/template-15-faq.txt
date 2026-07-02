@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{head}}
+
+
+<body>
+   {{header}} 
+	<section class="faq">
+		
+	<div class="container">
+		
+		<div class="row row_lg hleb-cab" id="main_section">
+			   <div class="col-lg-12">
+			   	[[DLcrumbs?
+    &ownerTPL=`@CODE: <nav itemscope itemtype="https://schema.org/BreadcrumbList"><ul class="breadcrumps mb40" itemprop="itemListElement">[+crumbs.wrap+]</ul></nav>`
+    &tpl=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[+url+]" ><span itemprop="name">[+e.title+]</span></a></li>`
+    &tplCurrent=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[+e.title+]</span></li>`
+    &showCurrent=`1`
+]]
+			   </div>
+			
+			
+        <div class="faq_block">
+			<h1 class="tit-main">[*pagetitle*]</h1>
+			
+			<p>Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. </p>
+            <div class="container_que">
+                <div class="question">
+                    Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse?
+                </div>
+                <div class="answercont" style="max-height: 0px;">
+                    <div class="answer">
+                     Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. Lectus mi risus bibendum nulla sed in purus. Molestie habitant arcu massa habitasse ullamcorper cursus turpis parturient egestas. Nulla eu amet diam tellus egestas. Placerat in fusce sed iaculis ultricies diam.
+                    </div>
+                </div>
+            </div>
+            <div class="container_que">
+                <div class="question">
+                    Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse?
+                </div>
+                <div class="answercont" style="max-height: 0px;">
+                    <div class="answer">
+                Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. Lectus mi risus bibendum nulla sed in purus. Molestie habitant arcu massa habitasse ullamcorper cursus turpis parturient egestas. Nulla eu amet diam tellus egestas. Placerat in fusce sed iaculis ultricies diam.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		
+	</section>
+	
+	
+	 {{footer}}
+	
+	<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((question) => {
+        question.addEventListener('click', (event) => {
+            const activeQuestion = document.querySelector('.question.active');
+            if(activeQuestion && activeQuestion!==question){
+                activeQuestion.classList.remove('active');
+                activeQuestion.nextElementSibling.style.maxHeight = 0;
+            }
+
+            question.classList.toggle('active');
+            
+            const answer = question.nextElementSibling;
+            if (question.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
+	</body>
+</html>

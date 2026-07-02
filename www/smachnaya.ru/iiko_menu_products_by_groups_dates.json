@@ -1,0 +1,895 @@
+{
+    "generatedAtUtc":  "2026-04-22T13:16:10Z",
+    "source":  {
+                   "baseUrl":  "https://api-ru.iiko.services",
+                   "organizationId":  "e1ed1ab2-a293-49f3-bb75-ee836bff98ca",
+                   "correlationId":  "7614e61d-9ce8-4024-a8cb-4d1004968959",
+                   "revision":  1776855392447
+               },
+    "totals":  {
+                   "groups":  8,
+                   "products":  79,
+                   "usableProductsDishOrGoods":  72,
+                   "mappedGroups":  3
+               },
+    "byGroups":  [
+                     {
+                         "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                         "groupName":  "",
+                         "ancestorNamesLower":  [
+
+                                                ],
+                         "productsCount":  59,
+                         "products":  [
+                                          {
+                                              "id":  "f8264145-1752-4339-8d54-757867ba95ee",
+                                              "name":  "Кура под соусом карри 140гр",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "1. Бедро выложить на смазанный маслом противень (кожей вниз), добавить соль и перец\n2. Запекать 10 мин, при t=180 градусов\n3. Запеченое бедро поместить в кипящую воду с добавлением карри\n4. Протушить на небольшом огне 10-15 мин\n5. Сметану, молоко и муку перемешать до однородной массы, добавить к мясу и тщательно перемешать\n6. обавить чеснок, лавровый лист, соль по вкусу и протушить 5-10 мин\n",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "161ef60d-6c3d-4a29-83db-0426cc3c9e15",
+                                              "name":  "Минтай (треска) с овощами в сметане 80/40гр",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "1. Треску или минтай на смазанный маслом противень, посолить\n2. Готовить на пару 7-8 минут, при t=180 градусов\n3. На готовую рыбу выложить соус",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "921bc462-f138-4133-a6ab-f2b6fed83cd4",
+                                              "name":  "Минтай жареный 110гр",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "1. Нарезанный минтай посолить, добавить приправу\n2. Запанировать в муке\n3. Обжарить с 2х сторон на растительном масле\n4. Выложить на смазанный противень\n5. Запекать 5-6 мин, при t=180 градусов",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "75a18951-bf92-47da-abad-68e734c1c9d7",
+                                              "name":  "Мясо по-французски",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "bd0762f5-b8a0-430c-a733-82acf85daca4",
+                                              "name":  "Утиный окорок ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  610,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "f85a222d-2d99-4384-bb00-7b16ea412b1f",
+                                              "name":  "Филе индейки запеченое 100гр",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "1. Филе индейки замариновать в растительном масле, соли м специях\n2. Выложить на противень\n3. Запекать 10-15 мин при t=180 градусов",
+                                              "weight":  0,
+                                              "priceCurrent":  257,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "b36c77a7-f4fd-4828-b020-855f8640a04d",
+                                              "name":  "Филе индейки на пару 100гр",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "1. Филе индейки замариновать в растительном масле, соли м специях\n2. Выложить на противень\n3. Готовить на пару 10-15 мин при t=180 градусов",
+                                              "weight":  0,
+                                              "priceCurrent":  257,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "afd8bce5-6c59-424e-a583-ca089c8b96a7",
+                                              "name":  "Я Бефстроганов",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  338,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "d53328f0-5084-41ac-ac95-22d865cfc43a",
+                                              "name":  "Я Биточек куриный",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  230,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "1c1b3f36-4560-412d-9803-386729d9cb42",
+                                              "name":  "Я Бифштекс с яйцом",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  338,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "9b29b37c-0d6f-4f8a-b3ac-c46ce3535818",
+                                              "name":  "Я Буженина с горчицей",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "f33fa698-b30d-47e0-8775-e9358299ea82",
+                                              "name":  "Я Говядина тушеная с овощами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  338,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "6e9f4960-5b25-4b43-a576-f7daccb41f22",
+                                              "name":  "Я Голубцы ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "(свинина, капуста б/к, лук репчатый, морковь, масло слив., томатная паста, сметана)",
+                                              "weight":  0,
+                                              "priceCurrent":  392,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "6af04880-db91-47c4-bb2a-0ade6e0c13f2",
+                                              "name":  "Я Голубцы ленивые",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  392,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "37c36ab2-cd37-4254-ac75-869718eb19cb",
+                                              "name":  "Я Горбуша в сырной корочке",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  338,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "c531b656-ab4c-4e66-93c9-48da6c5d8fcb",
+                                              "name":  "Я Гуляш из говядины",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  338,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "2b34888e-ec54-4033-8785-55be2a2f2a60",
+                                              "name":  "Я Гуляш из индейки ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "a4c721bf-9d98-411b-9b0c-748cdcc972cc",
+                                              "name":  "Я Жаркое по-домашнему",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  392,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "1d8b2b53-e8c1-4b07-8be8-16b7b25c84a9",
+                                              "name":  "Я Запеканка карт. с рыбой ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  378,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "a0fca932-cfbb-4f17-8367-4977728d2f90",
+                                              "name":  "Я Запеканка карт. с рыбой ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "66017f96-5d14-42c9-8676-eec0eb26e50d",
+                                              "name":  "Я Зраза карт. с луком и грибами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "bb37a5f0-f943-4647-b250-bf8dff237f4f",
+                                              "name":  "Я Капуста тушеная с опятами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  135,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "113320b6-cdee-44f4-988e-d76308bdade3",
+                                              "name":  "Я Картофель запеченый с грибами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "6677b8ea-7568-436d-8634-f1e1611be9f1",
+                                              "name":  "Я Котлета домашняя",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  230,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "c03d80d5-3b96-4c8b-9df1-6b585ecac298",
+                                              "name":  "Я Котлета запеченная с сыром",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  257,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "3a2bf261-1da0-4ded-a44b-d8596d43e7a1",
+                                              "name":  "Я Котлета из индейки",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "(индейка филе, молоко, батон, лук репчатый, яйцо, сухари панир., масло слив, картофель)",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "e3fe2d06-1662-4753-84dd-9c1b4a253517",
+                                              "name":  "Я Котлета из печени",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "305c8441-4928-4cce-8f26-5cb403c48e55",
+                                              "name":  "Я Котлета куриная",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  230,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "ff3b2973-c66a-42a0-b953-f0a706194b99",
+                                              "name":  "Я Котлета Пожарская",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "d5896cf5-c5f8-42cf-918a-1a5149f09e47",
+                                              "name":  "Я Котлета по-Киевски",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "bcbe7297-2d46-4ecb-8f99-1beb53a10396",
+                                              "name":  "Я Кура в грибном соусе",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "8be2f20c-190b-4fd4-b767-315f071c0843",
+                                              "name":  "Я Кура в сырной корочке",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "68e180eb-1929-4365-aec3-095f4acdb44f",
+                                              "name":  "Я Кура в томатном соусе",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "46a60f3f-fee9-4e98-94a0-90b5ecfbed40",
+                                              "name":  "Я Кура запеченая с помидором",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "85300019-404a-4005-be57-ba45c07571e2",
+                                              "name":  "Я Кура запеченная с ананасом",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "59af0ca3-3437-445b-a62c-21e63af53826",
+                                              "name":  "Я Кура запеченная с грибами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "464d7123-984b-464f-a95e-44aa8827f582",
+                                              "name":  "Я Куриная грудка запеченая",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  257,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "56bc58c7-bb80-4b11-936b-e4b70a98f320",
+                                              "name":  "Я Кускус с овощами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  175,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "773cf26f-a0ca-495a-be78-ac389bebe024",
+                                              "name":  "Я Лазанья мясная ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  392,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "ad25716b-1253-4c67-bfb3-b9403d45c436",
+                                              "name":  "Я Мясо запеченое с грибами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "4d480b3f-0342-46b1-839e-ade8590b0f38",
+                                              "name":  "Я Мясо запеченое с помидорами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "ada1f4a2-c74f-4fc3-ac4b-3fba8dd313cc",
+                                              "name":  "Я Отбивная из свинины",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  257,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "284468b7-b6aa-4577-8d91-41134c829507",
+                                              "name":  "Я Печень по-строгановски",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "4367579e-c151-4008-b9f4-8020e0d28fe1",
+                                              "name":  "Я Плов с курицей",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  338,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "a64f6070-2a5e-406f-826d-5889dcac9486",
+                                              "name":  "Я Плов с овощами и нутом",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "0b533bab-b766-436c-9678-dbf97430d1a6",
+                                              "name":  "Я Поджарка из свинины",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "f3283a5a-bde6-4076-ae50-d8c3673d3672",
+                                              "name":  "Я Ребра по соусом \"Барбекю\" ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  338,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "edd392b3-9df5-4c62-9f60-66f9837bb858",
+                                              "name":  "Я Ризотто с овощами и сыром",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "8cded52a-cfeb-4c58-9c12-95c7b6ac125a",
+                                              "name":  "Я Рис с овощами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  176,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "b81d7a12-c77c-40e0-b066-a7260a934ee3",
+                                              "name":  "Я Соте из запеченых овощей",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  216,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "02d7f41b-0eb0-421f-917c-6b882f4e80b2",
+                                              "name":  "Я Спагетти с овощами и сыром",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  176,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "1d2f1da9-6665-4d6c-9171-ad979729e136",
+                                              "name":  "Я Спагетти со шпин и сладким перцем",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "fa4afa05-8168-4921-a61d-2e1f4e76839f",
+                                              "name":  "Я Тефтели мясные ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "5804dc51-e551-4761-b917-60f3cdd56934",
+                                              "name":  "Я Тефтели рыбные",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  270,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "f44aabbb-f44f-4b7e-8e15-8d8080b39e5a",
+                                              "name":  "Я Филе Лосося запеченое",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  540,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "a18129fc-c223-46b9-8bd7-e03f64566647",
+                                              "name":  "Я Цыпленок барбекю",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  230,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "c3e79898-cc5d-4003-947c-93aea1ee85e6",
+                                              "name":  "Я Чечевица с овощами",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  176,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "45dafba7-7b7c-4cbe-9d02-74222a7b8028",
+                                              "name":  "Я Шницель из индейки ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "da932ab3-e4b9-402d-b441-4008c9f9a491",
+                                              "name":  "Я Шницель куриный ",
+                                              "type":  "Dish",
+                                              "groupId":  "db8683d2-31da-4466-b1fb-c1f14f68b9a8",
+                                              "groupName":  "",
+                                              "description":  "",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          }
+                                      ]
+                     },
+                     {
+                         "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                         "groupName":  "",
+                         "ancestorNamesLower":  [
+
+                                                ],
+                         "productsCount":  12,
+                         "products":  [
+                                          {
+                                              "id":  "f0ae7090-2bab-4f82-a11a-02368d0a0125",
+                                              "name":  "Я Борщ с фасолью",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(бульон куриный, свекла, картофель, перец болг., сметана)",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "f1c6dbc6-0975-4dc0-bb97-110d7938f1d6",
+                                              "name":  "Я Гороховый суп",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(бульон куриный,  горох сух, морковь, картофель, перец болг.)",
+                                              "weight":  0,
+                                              "priceCurrent":  189,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "b6639351-19e6-40ea-a223-242fab85404a",
+                                              "name":  "Я Куриный бульон с овощами",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(бульон куриный, картофель, морковь, чеснок)",
+                                              "weight":  0,
+                                              "priceCurrent":  189,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "f9feb3ff-beb0-44c4-b147-97b7aaf5ecfb",
+                                              "name":  "Я Куриный суп с вермишелью",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(бульон куриный, куриное филе, картофель, морковь, вермишель)",
+                                              "weight":  0,
+                                              "priceCurrent":  189,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "286c3e10-ac14-4be5-ae4b-ea1a62b8a75b",
+                                              "name":  "Я Рассольник",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(бульон куриный, картофель, огурец сол., крупа перловая, сметана)",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "b0555f55-8f67-4fea-b8fe-07d96fe74f05",
+                                              "name":  "Я Солянка мясная",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(бульон куриный, лук репчатый, огурец сол., томат, куриное филе, свинина, колбаса п/к)",
+                                              "weight":  0,
+                                              "priceCurrent":  243,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "db6f7621-02d4-43b7-9ace-401f7bd57dca",
+                                              "name":  "Я Суп - пюре сырный ",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(сыр плавл., картофель, морковь, сельдерей)",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "9bcd6a3d-f5d7-473c-9052-0d66c48388d8",
+                                              "name":  "Я Суп-пюре из шампиньонов",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(грибы шамп., морковь, картофель, сливки, чеснок)",
+                                              "weight":  0,
+                                              "priceCurrent":  230,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "f6c75908-17ff-4bb2-9dd3-9fd46cb3e688",
+                                              "name":  "Я Суп-пюре фасолевый",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(фасоль, картофель, морковь, сельдерей, чеснок)",
+                                              "weight":  0,
+                                              "priceCurrent":  189,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "c28150cd-d493-4572-b087-f9a4202e842e",
+                                              "name":  "Я Сырный суп с курицей",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(сыр плавл, куриное филе, картофель, морковь, чеснок)",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "42e67f24-cb6a-4023-ac9f-ec38f7f72215",
+                                              "name":  "Я Тыквенный крем-суп",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(тыква, перец болг., морковь, чеснок)",
+                                              "weight":  0,
+                                              "priceCurrent":  203,
+                                              "image":  null
+                                          },
+                                          {
+                                              "id":  "c2ea1170-0a9c-4cab-afff-08b456cc2e26",
+                                              "name":  "Я Щи из свежей капусты с грибами",
+                                              "type":  "Dish",
+                                              "groupId":  "d8c7b32d-c77d-4b74-9bf1-8f19d7a821d8",
+                                              "groupName":  "",
+                                              "description":  "(бульон куриный, капуста б/к, картофель, грибы шамп., морковь, сметана)",
+                                              "weight":  0,
+                                              "priceCurrent":  189,
+                                              "image":  null
+                                          }
+                                      ]
+                     },
+                     {
+                         "groupId":  "8bcca3f4-4098-47ac-8c56-6148faa066cd",
+                         "groupName":  "",
+                         "ancestorNamesLower":  [
+
+                                                ],
+                         "productsCount":  1,
+                         "products":  {
+                                          "id":  "c424859d-0477-44be-9648-e324ce5d4721",
+                                          "name":  "Я Профитроль",
+                                          "type":  "Dish",
+                                          "groupId":  "8bcca3f4-4098-47ac-8c56-6148faa066cd",
+                                          "groupName":  "",
+                                          "description":  "",
+                                          "weight":  0,
+                                          "priceCurrent":  122,
+                                          "image":  null
+                                      }
+                     }
+                 ],
+    "byDates":  [
+                    {
+                        "date":  "2026-04-22",
+                        "weekdayRu":  "среда",
+                        "productsCount":  0,
+                        "products":  {
+
+                                     }
+                    },
+                    {
+                        "date":  "2026-04-23",
+                        "weekdayRu":  "четверг",
+                        "productsCount":  0,
+                        "products":  {
+
+                                     }
+                    },
+                    {
+                        "date":  "2026-04-24",
+                        "weekdayRu":  "пятница",
+                        "productsCount":  0,
+                        "products":  {
+
+                                     }
+                    },
+                    {
+                        "date":  "2026-04-25",
+                        "weekdayRu":  "суббота",
+                        "productsCount":  0,
+                        "products":  {
+
+                                     }
+                    },
+                    {
+                        "date":  "2026-04-26",
+                        "weekdayRu":  "воскресенье",
+                        "productsCount":  0,
+                        "products":  {
+
+                                     }
+                    },
+                    {
+                        "date":  "2026-04-27",
+                        "weekdayRu":  "понедельник",
+                        "productsCount":  0,
+                        "products":  {
+
+                                     }
+                    },
+                    {
+                        "date":  "2026-04-28",
+                        "weekdayRu":  "вторник",
+                        "productsCount":  0,
+                        "products":  {
+
+                                     }
+                    }
+                ]
+}

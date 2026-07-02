@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{{head}}
+<body class="body-cart header-absolute">
+
+{{header}}
+<div id="ajax-a">
+        <div class="ajax-b">
+<div class="container">
+
+	<h1>[*pagetitle*]</h1>		
+	
+	
+			[!Cart
+    		&instance=`products`
+			&tpl=`cartrow`
+			&tvList=`image, price`
+			&ownerTPL=`cartwrap`
+		    &subtotalsRowTpl=`subtotalsRowTpl`
+			&defaultOptionsRender=`0`
+    		!]
+	
+	</div>
+	<!--ajax end-->
+		</div>
+		</div> <!--ajax end-->
+{{footer}}	
+</body>
+</html>

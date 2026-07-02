@@ -1,0 +1,57 @@
+<div class="cart" data-commerce-cart="[+hash+]">
+		<div class="cart-left">
+		[+dl.wrap+]	
+		</div>	
+		<div class="cart-right">	
+		<div class="cart_block_info">
+		<div class="title">Ваш заказ</div>
+			<div class="itog">
+				<div class="count_tovar">[+count+] товара</div>
+				<div class="total_tovar">[[PriceFormat? &price=`[+items_price+]`  &convert=`0`]]</div>
+			</div>	
+			<div class="itog_deliv">
+			[+subtotals+]
+			</div>
+			<div class="all_itog">
+				<div class="all_itog_title">
+				Общий итог:
+				</div>
+				<div class="all_itog_price">
+					[[PriceFormat? &price=`[+total+]`  &convert=`0`]]
+				</div>
+			</div>
+		    <div class="cart-action">
+					 <ul class="cart-total" style="display:none">
+						<li class="disabled">
+							<div class="label">Старая цена:</div>
+							<div class="price">5000 <sup>BYN</sup></div>
+						</li>
+						<li>
+							<div class="label">Цена с учетом скидки:</div>
+							<div class="price">4000 <sup>BYN</sup></div>
+						</li>
+					 </ul>
+					<form action="order.php" method="post" class="cart-form" style="display:none">
+						<div class="title">Введите код</div>
+						<div class="promo">
+							<input type="text" class="input">
+							<a href="javascript:void(0)" class="btn btn-dark">Применить</a>
+						</div>
+					</form>	
+					<div class="cart-form">	
+						<div class="action">
+							<a href="[~11~]" class="btn btn-green no-barba">Оформить заказ [[PriceFormat? &price=`[+total+]`  &convert=`0`]]</a>
+						</div>
+					</div>	
+					
+				</div>
+				<div class="cart-info">
+					<ul class="info">
+												
+					</ul>
+				</div>
+			</div>	
+	    </div>
+	</div>
+</div>			
+			

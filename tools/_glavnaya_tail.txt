@@ -1,0 +1,90 @@
+us);
+                }
+                removeLoader();  // Удалить анимацию загрузки только после завершения обоих запросов
+            };
+            productsXhr.send();
+        } else {
+            console.error('Ошибка при загрузке данных: ' + xhr.status);
+            removeLoader();
+        }
+    };
+    xhr.send();
+});
+
+datesDiv.appendChild(dateDiv);
+	
+});
+	</script>
+	<script>
+		var today = document.querySelector('.date.selected');
+	today.innerHTML += ' (завтра)';
+	</script>
+	<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((question) => {
+        question.addEventListener('click', (event) => {
+            const activeQuestion = document.querySelector('.question.active');
+            if(activeQuestion && activeQuestion!==question){
+                activeQuestion.classList.remove('active');
+                activeQuestion.nextElementSibling.style.maxHeight = 0;
+            }
+
+            question.classList.toggle('active');
+            
+            const answer = question.nextElementSibling;
+            if (question.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
+	
+		
+</body>
+<script>
+		/*$(document).on('cart-add-complete.commerce', function(e, params) {
+			console.log(params);
+			Toastify({
+
+				text: ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"" ,
+
+				duration: 1000,
+				 className: "info",
+				style: {
+				
+				background: "linear-gradient(90deg, rgb(81 123 57) 0%, rgb(60 101 37) 56%, rgb(38 79 15) 100%)",
+					
+					
+				},
+
+				}).showToast();
+
+				});*/
+	       		$(document).on('cart-add-complete.commerce', function (e, params) {
+				var instance = params.data.instance;
+				switch (instance) {
+					case 'wishlist':
+						var growlText = ""+params.response.name+" добавлен в избранное";
+						var growlLink = "/favorites";
+						break;
+					case 'products':
+					default:
+						var growlText = ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"";
+						var growlLink = "/cart";
+						break;
+				}
+				Toastify({
+					text: growlText,
+					destination: growlLink,
+					duration: 1000,
+				 	className: "info",
+					style: {
+						background: "linear-gradient(90deg, rgb(81 123 57) 0%, rgb(60 101 37) 56%, rgb(38 79 15) 100%)",
+					},
+					}).showToast();
+				});
+	</script>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+{{head}}
+<body class="common-home">
+    <div class="page_wrap">
+
+  <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
+  <div class="menu_overlay"></div>
+
+  {{header}}
+  <div id="ajax-a">
+        <div class="ajax-b catalog_page">		
+	
+  <div class="section_wr">
+  <section class="section_offset">
+    <div class="container">
+
+    
+          
+		<style>
+			.img-fluid {
+			  width: 100%;
+			  height: auto;
+			}
+
+			.sticky-top {
+			  position: -webkit-sticky;
+			  position: sticky;
+			  top: 85px;
+			  max-width: 420px
+			 
+			}
+			
+			
+		</style>	
+		
+		
+		
+           <div class="row row_lg" id="main_section">
+			   <div class="col-lg-12">
+			   	[[DLcrumbs?
+    &ownerTPL=`@CODE: <nav itemscope itemtype="https://schema.org/BreadcrumbList"><ul class="breadcrumps mb40" itemprop="itemListElement">[+crumbs.wrap+]</ul></nav>`
+    &tpl=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[+url+]" ><span itemprop="name">[+e.title+]</span></a></li>`
+    &tplCurrent=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[+e.title+]</span></li>`
+    &showCurrent=`1`
+]]
+			   </div>
+			   <div class="col-lg-2">
+				   <div class="left_menu">
+					   
+					   
+					   <div class="item_top_menu" style="margin-bottom: 20px;
+    border-bottom: solid 1px #ececec;
+    padding-bottom: 20px;">
+						  <a href="[~[+id+]~]" class="item_top_link "></a>
+						   <div class="item_top_title red">Акции <img src="/assets/images/discount.png">
+						   </div>
+					   </div>
+					   
+					   
+				   	[!DocLister?
+													&orderBy=`menuindex ASC`
+													&parents=`2`
+													&tvList=``
+													&tpl=`home_catalog`
+													&depth=`0`
+													&tplFirst=`@CODE:<div class="item_top_menu">
+                  <a href="/[~[+id+]~]" class="item_top_link "></a>
+                 <div class="item_top_title red">[+pagetitle+]</div>
+                </div>`
+													&noneTPL=`@CODE:<div class="col-12">Категорий нет</div>`
+												  !]
+					   
+					   
+				   </div>
+				   
+				   
+			   </div>  
+			   <div class="col-lg-10">
+				  <h1 class="main_h1">[*pagetitle*]</h1>  
+		
+                  <div class="data_day">
+			<div id="dates">
+
+			</div>
+			<a id="download-button" href="/assets/images/u-31482d980810e7197abd71b2f5f2a923.jpg" download>
+				<div id="icon"><img src="/image/download.svg"></div><span>Скачать меню на текущую неделю</span>
+			</a>
+		</div>
+			 				
+        <div class="produkt_day">
+			[!DocLister?
+                                        &display=`50`
+										&orderBy=`[[filter_order]]`
+                                        &parents=`[*id*]`
+                                        &tvList=`image, price, massa`
+                                        &renderTV=`image`
+                                        &tpl=`menu_day`
+                                        &depth=`10`
+                                        &noneTPL=`@CODE:<div class="col-12">Товаров нет</div>`
+                                        &tvSortType=`UNSIGNED`
+                                        &paginate=`pages`
+                                        &TplNextP=``
+                                        &TplPrevP=``
+                                        &TplPage=`@CODE: <li><a title="[+num+]" href="[+link+]" class="">[+num+]</a></li>`
+                                        &TplCurrentPage=`@CODE: <li><span>[+num+]</span></li>`
+                                        &TplWrapPaginate=`@CODE: <ul class="pagination d-flex justify-content-center justify-content-sm-start flex-wrap">[+wrap+]</ul>`
+								!]
+			
+			
+			
+        </div>
+				   <div class="content_block">[*content*]</div>
+			 
+			
+			   </div>
+		</div>
+
+                
+
+          
+  
+			
+			
+			
+			
+			
+			
+	 
+	 	
+		
+		
+		
+     <button class="btn btn-white-f rew_modal no-barba" onclick="rew_modal();" style="display:none">Оставить отзыв</button>
+     
+		
+		<div class="popup-container-rew">
+			<div class="popup_rew" style="display:none;">
+				
+				
+		<button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="popup_rew_close();">
+              <span aria-hidden="true"><svg id="icon-close" viewBox="0 0 21.97 22" class="close_svg">
+                  <path fill-rule="evenodd" d="M.19 21.8a.718.718 0 0 0 .44.2.745.745 0 0 0 .45-.2l9.91-9.9 9.9 9.9a.606.606 0 0 0 .9 0 .631.631 0 0 0 0-.9L11.88 11l9.91-9.9a.631.631 0 0 0 0-.9.563.563 0 0 0-.9 0l-9.9 9.9L1.08.2a.553.553 0 0 0-.89 0 .631.631 0 0 0 0 .9l9.9 9.9-9.9 9.9a.631.631 0 0 0 0 .9z"></path>
+              </svg></span>
+            </button>
+		
+			<div id="comment-form-placeholder">
+				<div class="title_rew">Оставить отзыв на [*pagetitle*]</div>
+            	<form id="comment-form" action="" method="post" class="well">
+            		<div id="comment-preview-placeholder"></div>
+            		<input type="hidden" name="thread" value="">
+            		<input type="hidden" name="parent" value="0">
+            		<input type="hidden" name="id" id="prod_id" value="[*id*]">
+                    <input type="hidden" name="rating" id="rating" value="0">
+					<input type="hidden" name="images" id="images" value="">
+                    <div class="form-group" style="display: flex;flex-direction: column;margin-bottom: 20px;">
+                    <label id="comment-stars">Оставьте оценку*</label>
+                    <span class="rating"></span>
+                    </div>
+            
+            		<div class="form-group">
+            			<input type="text" name="name" value="" id="comment-name" class="form-control" placeholder="Ваше имя*">
+            		</div>
+            
+            		<div class="form-group">
+            			<input type="text" name="email" value="" id="comment-email" class="form-control" placeholder="Email">
+            		</div>
+            		
+            	   	
+                    <div class="form-group">
+            			<label for="comment-do"></label>
+            			<textarea name="commentdo" id="comment-do" cols="3" rows="3" class="form-control" placeholder="Достоинства" style="max-height:90px;"></textarea>
+            		</div>
+            		
+            		<div class="form-group">
+            			<label for="comment-nedo"></label>
+            			<textarea name="commentnedo" id="comment-nedo" cols="3" rows="3" class="form-control" placeholder="Недостатки" style="max-height:90px;"></textarea>
+            		</div>
+            
+            		<div class="form-group">
+            			<label for="comment-editor"></label>
+            			<textarea name="text" id="comment-editor" cols="30" rows="4" class="form-control" placeholder="Ваш комментарий*"></textarea>
+            		</div>
+					
+					  <div class="form-group">
+						   <input id="file-input" type="file" name="file" multiple>
+						   <label for="file-input">Выберите файл</label>
+						   <span>или перетащите его сюда</span>
+					  </div>
+            
+            		<div class="form-actions">
+            			<input type="submit" class="btn button_rew" onclick="button_rew(event);" value="Написать">
+            		</div>
+            	</form>
+            </div>
+			</div>
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</div>	
+		
+		
+			
+			</div>  
+			</section>  
+			</div>
+			
+			 <div id="modal_product" class="modal_product">
+    <div class="spinner"></div>
+	  <div class="modal_title"></div>
+    <div class="modal_content">
+    <div class="tab" id="tab1-header">
+		<div class="table_sizes">
+        
+    </div>
+	</div>
+	<div class="tab" id="tab2-header">[*content*]</div>
+	<div class="tab" id="tab4-header">
+		[!CalculateAverageRating? &docId=`[*id*]`!]
+		
+		
+		[!JotX? &config=`ajax` &customfields=`rewstar,name,email` !]</div>
+	<div class="tab" id="tab5-header"> [!mag_count? &targetId=`[*id*]`!]</div>	
+		
+		
+		
+    </div>
+	  <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closemodal();">
+							  <span aria-hidden="true"><svg id="icon-close" viewBox="0 0 21.97 22" class="close_svg">
+								  <path fill-rule="evenodd" d="M.19 21.8a.718.718 0 0 0 .44.2.745.745 0 0 0 .45-.2l9.91-9.9 9.9 9.9a.606.606 0 0 0 .9 0 .631.631 0 0 0 0-.9L11.88 11l9.91-9.9a.631.631 0 0 0 0-.9.563.563 0 0 0-.9 0l-9.9 9.9L1.08.2a.553.553 0 0 0-.89 0 .631.631 0 0 0 0 .9l9.9 9.9-9.9 9.9a.631.631 0 0 0 0 .9z"></path>
+							  </svg></span>
+							</button>
+							  
+							 <!-- Новый элемент "крестик" -->
+</div>
+			
+			<!--ajax end-->
+		</div>
+		</div> <!--ajax end-->
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+  
+  
+
+ <div class="popup-container-oneclick">
+			<div class="popup_oneclick" style="display:none;">
+				
+				
+		<a href="#" data-commerce-action="remove" data-id="[*id*]" data-instance="quickorder"><button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="popup_oneclick();">
+              <span aria-hidden="true"><svg id="icon-close" viewBox="0 0 21.97 22" class="close_svg">
+                  <path fill-rule="evenodd" d="M.19 21.8a.718.718 0 0 0 .44.2.745.745 0 0 0 .45-.2l9.91-9.9 9.9 9.9a.606.606 0 0 0 .9 0 .631.631 0 0 0 0-.9L11.88 11l9.91-9.9a.631.631 0 0 0 0-.9.563.563 0 0 0-.9 0l-9.9 9.9L1.08.2a.553.553 0 0 0-.89 0 .631.631 0 0 0 0 .9l9.9 9.9-9.9 9.9a.631.631 0 0 0 0 .9z"></path>
+              </svg></span>
+			</button></a>
+		
+			<div id="comment-form-placeholder">
+				<!--<div class="title">Товар [*pagetitle*] добавлен в корзину</div>-->
+				<p>*При заказе из магазина, возможно заказать только одну единицу товара</p>
+				<p>**Стоимость доставки [[DocInfo? &docid=`238` &field=`deliveryprice`]] р.</p>
+				<div class="actions">
+				<a href="/peremeshhenie-iz-magazina" class="btn">Оформить заказ</a><a href="#" data-commerce-action="remove" data-id="[*id*]" data-instance="quickorder"><botton class="btn" onClick="popup_oneclick();">Отменить</button></a>
+				</div>
+            	
+            </div>
+			</div>
+		</div>
+
+
+ {{footer}}	
+     <script>
+     // Функция для форматирования даты в строку DD Month
+function formatDate(date) {
+    var dd = String(date.getDate()).padStart(2, '0');
+    var mm = date.getMonth(); 
+    var months = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
+    var monthName = months[mm];
+
+    return dd + ' ' + monthName;
+}
+		
+function formatDateAjax(date) {
+    var day = date.getDate(); // день
+    var month = date.getMonth() + 1; // месяцы считаются с 0 в JavaScript
+    var year = date.getFullYear(); // год
+
+    // Если день или месяц меньше 10, добавляем в начало "0"
+    if (day < 10) day = '0' + day;
+    if (month < 10) month = '0' + month;
+
+    return day + '.' + month + '.' + year;
+}	
+
+// Создание элемента загрузчика
+function createLoader() {
+    var loader = document.createElement("div");
+    loader.style.position = "fixed";
+    loader.style.top = "0";
+    loader.style.right = "0";
+    loader.style.bottom = "0";
+    loader.style.left = "0";
+    loader.style.background = "rgba(0,0,0,0.5)";
+    loader.style.display = "flex";
+    loader.style.justifyContent = "center";
+    loader.style.alignItems = "center";
+    loader.style.zIndex = "10000";
+    loader.innerHTML = '<div class="loader"></div>';
+    loader.id = "loader";
+
+    var spinner = document.createElement("div");
+    spinner.style.border = "16px solid #f3f3f3";
+    spinner.style.borderTop = "16px solid #517B39";
+    spinner.style.borderRadius = "50%";
+    spinner.style.width = "100px";
+    spinner.style.height = "100px";
+    spinner.style.animation = "spin 2s linear infinite";
+    spinner.className = "spinner";
+
+    loader.appendChild(spinner);
+
+    document.body.appendChild(loader);
+
+    var style = document.createElement('style');
+    style.innerHTML = `
+        .spinner {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #517B39;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Удаление элемента загрузчика
+function removeLoader() {
+    var loader = document.getElementById("loader");
+    loader.remove();
+}
+
+// Получить даты
+var yesterday = new Date();
+yesterday.setDate(yesterday.getDate() - 1);
+var today = new Date();
+var dates = [yesterday, today];
+for (var i = 1; i <= 5; i++) {
+    var date = new Date();
+    date.setDate(today.getDate() + i);
+    dates.push(date);
+}
+
+// Вставить даты в HTML
+var datesDiv = document.getElementById('dates');
+dates.forEach(function(date, i) {
+    var dateDiv = document.createElement('div');
+    dateDiv.className = 'date';
+    if (i === 2) {
+        dateDiv.classList.add('selected');
+		
+		// Загрузить содержимое AJAX'ом
+        var xhr = new XMLHttpRequest();
+		var sectionId = [*id*]; 
+        xhr.open('GET', '/menu-day.html?date=' + formatDateAjax(date) + '&sectionId=' + sectionId);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                document.querySelector('.produkt_day').innerHTML = xhr.responseText;
+				
+            } else {
+                console.error('Ошибка при загрузке данных: ' + xhr.status);
+            }
+        };
+        xhr.send();
+    }
+    dateDiv.textContent = formatDate(date);
+	
+	
+    dateDiv.addEventListener('click', function() {
+        // Обновить стиль выбранной даты
+        document.querySelector('.date.selected').classList.remove('selected');
+		var sectionId = [*id*]; 
+        this.classList.add('selected');
+		createLoader();
+        // Загрузить содержимое AJAX'ом
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/menu-day.html?date=' + formatDateAjax(date) + '&sectionId=' + sectionId);
+						 
+						 
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                document.querySelector('.produkt_day').innerHTML = xhr.responseText;
+				removeLoader();
+            } else {
+                console.error('Ошибка при загрузке данных: ' + xhr.status);
+            }
+        };
+        xhr.send();
+    });
+    datesDiv.appendChild(dateDiv);
+	
+});
+	</script>
+	<script>
+		var today = document.querySelector('.date.selected');
+	today.innerHTML += ' (завтра)';
+	</script>
+	<script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach((question) => {
+        question.addEventListener('click', (event) => {
+            const activeQuestion = document.querySelector('.question.active');
+            if(activeQuestion && activeQuestion!==question){
+                activeQuestion.classList.remove('active');
+                activeQuestion.nextElementSibling.style.maxHeight = 0;
+            }
+
+            question.classList.toggle('active');
+            
+            const answer = question.nextElementSibling;
+            if (question.classList.contains('active')) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                answer.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
+</body>
+<script>
+		/*$(document).on('cart-add-complete.commerce', function(e, params) {
+			console.log(params);
+			Toastify({
+
+				text: ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"" ,
+
+				duration: 1000,
+				 className: "info",
+				style: {
+				
+				background: "linear-gradient(90deg, rgb(81 123 57) 0%, rgb(60 101 37) 56%, rgb(38 79 15) 100%)",
+					
+					
+				},
+
+				}).showToast();
+
+				});*/
+	       		$(document).on('cart-add-complete.commerce', function (e, params) {
+				var instance = params.data.instance;
+				switch (instance) {
+					case 'wishlist':
+						var growlText = ""+params.response.name+" добавлен в избранное";
+						var growlLink = "/favorites";
+						break;
+					case 'products':
+					default:
+						var growlText = ""+params.response.name+" добавлен в заказ. Доставка "+params.data.options.material+"";
+						var growlLink = "/cart";
+						break;
+				}
+				Toastify({
+					text: growlText,
+					destination: growlLink,
+					duration: 1000,
+				 	className: "info",
+					style: {
+						background: "linear-gradient(90deg, rgb(81 123 57) 0%, rgb(60 101 37) 56%, rgb(38 79 15) 100%)",
+					},
+					}).showToast();
+				});
+	</script>
+</html>

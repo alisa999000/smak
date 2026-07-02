@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+{{head}}
+
+
+<body>
+   {{header}} 
+	<section>
+		
+	<div class="container">
+		
+		<div class="row row_lg hleb-cab s" id="main_section">
+			   <div class="col-lg-12">
+			   	[[DLcrumbs?
+    &ownerTPL=`@CODE: <nav itemscope itemtype="https://schema.org/BreadcrumbList"><ul class="breadcrumps mb40" itemprop="itemListElement">[+crumbs.wrap+]</ul></nav>`
+    &tpl=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="[+url+]" ><span itemprop="name">[+e.title+]</span></a></li>`
+    &tplCurrent=`@CODE:<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active"><span itemprop="name">[+e.title+]</span></li>`
+    &showCurrent=`1`
+]]
+			   </div>
+		</div>
+	</div> <!-- end .container -->
+ 			
+			<div class="detail-news">
+					<div class="container">
+						<h1 class="deatil-tit">[*pagetitle*]</h1>
+					</div>
+			</div><br>
+		
+		<section class="okomp">
+			
+			<div class="container">
+				<h2>Наша миссия</h2><br>
+				<p class="okomp-text">Viverra sollicitudin sed mi lectus orci. In convallis nibh tortor condimentum vel. Molestie tortor accumsan adipiscing lorem aliquet hendrerit libero in. At odio consequat non ac commodo commodo cursus ultrices. Et pharetra diam pellentesque non. Viverra metus nisi magna vel pellentesque vitae viverra tempor cras. </p><br><br>
+				
+				
+				<div class="row">
+					
+					<div class="col-md-6">
+						<img class="smach" src="/image/smach.webp" alt="image">
+					</div>
+					
+					<div class="col-md-6">
+						<h3>Очередной заголовок</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur. Commodo fermentum sit feugiat eget dapibus vivamus viverra commodo laoreet. Arcu nisi ipsum quis mattis donec eget in rhoncus pretium. Viverra sollicitudin sed mi lectus orci. <br><br>
+
+	In convallis nibh tortor condimentum vel. Molestie tortor accumsan adipiscing lorem aliquet hendrerit libero in. At odio consequat non ac commodo commodo cursus ultrices. Et pharetra diam pellentesque non. Viverra metus nisi magna vel pellentesque vitae viverra tempor cras. Vulputate tincidunt netus quis at ut imperdiet suspendisse fringilla quis. Proin vel nulla metus nec a ut et.
+						</p>
+					</div>
+					
+				</div><!-- end .row -->
+				
+			<div class="cennost">
+				
+				<h2 class="cennost-title">Наши ценности</h2>
+				
+				<div class="row">
+					<div class="col-md-4">
+						<div class="cennost-block">
+							<h5>Простота</h5><br>
+							<p>Мы стремимся к тому, чтобы наши продукты, процессы и взаимодействие с клиентами были максимально простыми и понятными. Во всем, что мы делаем, мы стараемся устранить ненужные барьеры и трения, сосредоточившись на самой важной и эффективной работе.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="cennost-block">
+							<h5>Скорость</h5><br>
+							<p>Мы стремимся к тому, чтобы наши продукты, процессы и взаимодействие с клиентами были максимально простыми и понятными. Во всем, что мы делаем, мы стараемся устранить ненужные барьеры и трения, сосредоточившись на самой важной и эффективной работе.</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="cennost-block">
+							<h5>Надежность</h5><br>
+							<p>Мы стремимся к тому, чтобы наши продукты, процессы и взаимодействие с клиентами были максимально простыми и понятными. Во всем, что мы делаем, мы стараемся устранить ненужные барьеры и трения, сосредоточившись на самой важной и эффективной работе.</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>	<!-- end .cennost -->
+				
+				
+			<br><br>
+				
+			<div class="goknam">
+				<div class="row">
+					<div class="col-md-6">
+						
+						<h4 class="goknam-title">
+							Присоединяйтесь к нашей команде
+						</h4>
+						<p class="goknam-text">
+							Lorem ipsum dolor sit amet consectetur. Ultricies metus ac tellus nisl enim suspendisse. Cum adipiscing porttitor ullamcorper dolor semper gravida laoreet. In neque molestie nibh arcu mattis massa. 
+						</p><br>
+						<a href="#" style="text-decoration:none;"><span class="goknam-buts">Подать заявку</span></a>
+					</div>
+				</div>
+			</div>
+				
+				
+			</div>
+			
+		</section>
+		
+
+		
+	
+
+		
+	</section>
+	
+	
+
+	
+	
+	 {{footer}}
+	
+	
+	</body>
+</html>

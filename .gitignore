@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# Build outputs (собираются на сервере или локально)
+frontend/dist/
+admin/dist/
+menu-crm/.next/
+menu-crm/out/
+menu-crm/build/
+
+# Env и секреты
+.env
+.env.local
+.env.*.local
+!.env.example
+!**/.env.example
+
+# Базы и логи
+menu-crm/prisma/dev.db
+menu-crm/prisma/dev.db-journal
+menu-crm/prisma/*.db
+menu-crm/prisma/*.db-journal
+*.log
+npm-debug.log*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.tsbuildinfo
+
+# Архивы и дампы (не для git)
+*.zip
+*.sql
+menu-crm-for-server.zip
+test.zip
+
+# Временные HTML-дампы в корне
+/_*.html
+
+# Legacy MODX (PHP) — сайт работает без него
+www/smachnaya.ru/core/
+www/smachnaya.ru/manager/
+www/smachnaya.ru/parser/
+www/smachnaya.ru/index.php
+www/smachnaya.ru/session.php
+www/smachnaya.ru/composer.json
+www/smachnaya.ru/config.php.example
+
+# Загруженные фото (на сервере появятся после upload)
+menu-crm/public/uploads/*
+!menu-crm/public/uploads/.gitkeep
+
+# Cursor
+.cursor/
+agent-transcripts/
