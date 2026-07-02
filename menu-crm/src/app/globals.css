@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6f4f1;
+  --surface: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --line: #e8e4df;
+  --accent: #ff3b30;
+  --accent-hover: #e63229;
+  --chip: #fff3f2;
+}
+
+body {
+  color: var(--ink);
+  background: var(--bg);
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", sans-serif;
+}

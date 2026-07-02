@@ -1,0 +1,222 @@
+// Unified backend (замена Evolution CMS): меню, CMS, auth, commerce.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id           String    @id @default(cuid())
+  name         String
+  slug         String    @unique
+  legacyModxId Int?      @unique
+  iikoGroupId  String?   @unique
+  sortOrder    Int       @default(0)
+  products     Product[]
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+}
+
+model Product {
+  id                 String                       @id @default(cuid())
+  slug               String                       @unique
+  legacyModxId       Int?                         @unique
+  iikoProductId      String?                      @unique
+  sku                String?
+  name               String
+  description        String                       @default("")
+  composition        String                       @default("")
+  weightGrams        Int?
+  published          Boolean                      @default(true)
+  defaultInMenuDaily Boolean                      @default(false)
+  categoryId         String
+  category           Category                     @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  images             ProductImage[]
+  price              Price?
+  weeklyItems        WeeklyMenuItem[]
+  weeklyDefaultSkips WeeklyMenuDefaultExclusion[]
+  cartItems          CartItem[]
+  orderItems         OrderItem[]
+  createdAt          DateTime                     @default(now())
+  updatedAt          DateTime                     @updatedAt
+
+  @@index([categoryId])
+  @@index([published])
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  path      String
+  sortOrder Int     @default(0)
+
+  @@index([productId])
+}
+
+model Price {
+  id        String   @id @default(cuid())
+  productId String   @unique
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  amountKop Int
+  updatedAt DateTime @updatedAt
+}
+
+model WeeklyMenuItem {
+  id        String  @id @default(cuid())
+  weekStart String
+  dayOfWeek Int
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sortOrder Int     @default(0)
+
+  @@unique([weekStart, dayOfWeek, productId])
+  @@index([weekStart, dayOfWeek])
+}
+
+model WeeklyMenuDefaultExclusion {
+  id        String  @id @default(cuid())
+  weekStart String
+  dayOfWeek Int
+  productId String
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([weekStart, dayOfWeek, productId])
+  @@index([weekStart])
+}
+
+model SiteSettings {
+  id              Int     @id @default(1)
+  siteName        String  @default("Смачная точка")
+  siteUrl         String  @default("http://localhost:5173")
+  phone           String  @default("+7 (911) 792-48-29")
+  email           String  @default("smachnayatochka@mail.ru")
+  notifyEmail     String  @default("syasik13@gmail.com")
+  hours           String  @default("Ежедневно, без выходных")
+  orderDeadline   String  @default("Заказы до 16:00")
+  orderSystemUrl  String  @default("https://lk.smachnaya.ru")
+  companyJson     String  @default("{}")
+  menuRootId      Int     @default(2)
+  newsRootId      Int     @default(36)
+}
+
+model Page {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  legacyModxId Int?     @unique
+  parentSlug   String?
+  pagetitle    String
+  longtitle    String   @default("")
+  description  String   @default("")
+  introtext    String   @default("")
+  content      String   @default("")
+  template     Int      @default(1)
+  menuindex    Int      @default(0)
+  isfolder     Boolean  @default(false)
+  published    Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([parentSlug])
+}
+
+model NewsPost {
+  id           String   @id @default(cuid())
+  slug         String   @unique
+  legacyModxId Int?     @unique
+  pagetitle    String
+  introtext    String   @default("")
+  content      String   @default("")
+  published    Boolean  @default(true)
+  publishedAt  DateTime @default(now())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Banner {
+  id        String @id @default(cuid())
+  image     String
+  title     String @default("")
+  text      String @default("")
+  link      String @default("")
+  sortOrder Int    @default(0)
+}
+
+model SiteUser {
+  id           String        @id @default(cuid())
+  legacyModxId Int?          @unique
+  username     String        @unique
+  email        String        @unique
+  passwordHash String
+  fullname     String        @default("")
+  phone        String        @default("")
+  accountType  String        @default("personal")
+  extendedJson String        @default("{}")
+  sessions     SiteSession[]
+  orders       Order[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model SiteSession {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  userId    String
+  user      SiteUser @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+}
+
+model CartSession {
+  id        String     @id @default(cuid())
+  token     String     @unique
+  expiresAt DateTime
+  items     CartItem[]
+  createdAt DateTime   @default(now())
+}
+
+model CartItem {
+  id            String      @id @default(cuid())
+  cartSessionId String
+  cartSession   CartSession @relation(fields: [cartSessionId], references: [id], onDelete: Cascade)
+  productId     String
+  product       Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  instance      String      @default("products")
+  count         Int         @default(1)
+  optionsJson   String      @default("{}")
+
+  @@unique([cartSessionId, productId, instance])
+  @@index([cartSessionId, instance])
+}
+
+model Order {
+  id         String      @id @default(cuid())
+  legacyModxId Int?      @unique
+  userId     String?
+  user       SiteUser?   @relation(fields: [userId], references: [id], onDelete: SetNull)
+  status     String      @default("new")
+  amountKop  Int
+  currency   String      @default("RUB")
+  fieldsJson String      @default("{}")
+  items      OrderItem[]
+  createdAt  DateTime    @default(now())
+}
+
+model OrderItem {
+  id         String  @id @default(cuid())
+  orderId    String
+  order      Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId  String
+  product    Product @relation(fields: [productId], references: [id])
+  name       String
+  count      Int
+  priceKop   Int
+
+  @@index([orderId])
+}

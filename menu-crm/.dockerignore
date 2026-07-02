@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+*.md
+.env
+.env.*
+!.env.example
+prisma/dev.db
+prisma/dev.db-journal
+coverage
+.vercel
+*.tsbuildinfo
