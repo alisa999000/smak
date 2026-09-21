@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const dynamic = "force-dynamic";
+
 const nav = [
   { href: "/dashboard", label: "Обзор" },
   { href: "/categories", label: "Категории" },

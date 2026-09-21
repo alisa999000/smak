@@ -9,8 +9,9 @@ RUN npm ci
 FROM deps AS builder
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+# Пустая SQLite только для билда: страницы CRM дергают prisma при prerender.
 ENV DATABASE_URL="file:./build.db"
-RUN npx prisma generate && npm run build
+RUN npx prisma generate && npx prisma db push --skip-generate && npm run build
 
 FROM node:20-bookworm-slim AS runner
 WORKDIR /app
