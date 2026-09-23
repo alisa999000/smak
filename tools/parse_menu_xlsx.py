@@ -108,7 +108,7 @@ def parse_anchor_week_start(xl: pd.ExcelFile) -> str:
                 m = re.match(r"(\d{4}-\d{2}-\d{2})", s)
                 if m:
                     return m.group(1)
-    return "2026-06-01"
+    return "2026-09-21"
 
 
 def build_menu(path: Path) -> dict:

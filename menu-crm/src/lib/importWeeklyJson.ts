@@ -28,7 +28,7 @@ function parseWeightGrams(raw: string | undefined): number | null {
 }
 
 export async function importWeeklyMenuJson(prisma: PrismaClient, data: WeeklyJson) {
-  const anchor = normalizeWeekStartISO(data.anchorWeekStart ?? "2026-06-01");
+  const anchor = normalizeWeekStartISO(data.anchorWeekStart ?? "2026-09-21");
   let productsCreated = 0;
   let productsUpdated = 0;
   let weeklyItems = 0;

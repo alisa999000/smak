@@ -120,6 +120,8 @@ watch(
             :key="p.id"
             :product="p"
             :parent-title="categoryTitle"
+            hide-image
+            dense
           />
         </div>
       </div>

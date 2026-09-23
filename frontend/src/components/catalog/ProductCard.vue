@@ -5,16 +5,26 @@ import { formatWeight, parsePriceNumber } from '@/utils/dates'
 import { docRoute } from '@/utils/catalog'
 import ProductImage from '@/components/catalog/ProductImage.vue'
 
-const props = defineProps<{ product: SiteDocument; parentTitle?: string }>()
+const props = withDefaults(
+  defineProps<{ product: SiteDocument; parentTitle?: string; hideImage?: boolean; dense?: boolean }>(),
+  { hideImage: false, dense: false },
+)
 
 const priceAmount = computed(() => parsePriceNumber(props.product.tvs.price))
 const weightLabel = computed(() => formatWeight(props.product.tvs.massa))
 </script>
 
 <template>
-  <div class="col-md-3 col-sm-6 produkt_day__col">
-    <article class="product-card item_produkt">
-      <RouterLink :to="docRoute(product.url)" class="product-card__media item_produkt-img">
+  <div
+    class="produkt_day__col"
+    :class="dense ? 'produkt_day__col--dense col-md-2 col-sm-4' : 'col-md-3 col-sm-6'"
+  >
+    <article class="product-card item_produkt" :class="{ 'product-card--text': hideImage }">
+      <RouterLink
+        v-if="!hideImage"
+        :to="docRoute(product.url)"
+        class="product-card__media item_produkt-img"
+      >
         <ProductImage :src="product.tvs.image" :alt="product.pagetitle" />
       </RouterLink>
 

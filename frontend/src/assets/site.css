@@ -463,6 +463,24 @@ a#download-button,
   }
 }
 
+@media (min-width: 1200px) {
+  .produkt_day__col--dense {
+    flex: 0 0 calc(16.666% - 9px);
+    max-width: calc(16.666% - 9px);
+  }
+}
+
+@media (min-width: 1400px) {
+  .produkt_day__col--dense {
+    flex: 0 0 calc(12.5% - 9px);
+    max-width: calc(12.5% - 9px);
+  }
+}
+
+.product-card--text {
+  padding: 12px 14px;
+}
+
 .produkt_day__empty {
   width: 100%;
   padding: 12px 2px;

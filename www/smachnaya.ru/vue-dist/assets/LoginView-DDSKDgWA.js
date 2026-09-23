@@ -1,0 +1,1 @@
+import{_ as e}from"./LoginView.vue_vue_type_script_setup_true_lang-CFOzMong.js";import{d as o,E as a,o as n}from"./index-BNRaB48M.js";const m=o({__name:"LoginView",setup(r){return(t,_)=>(n(),a(e))}});export{m as default};

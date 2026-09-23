@@ -33,6 +33,8 @@
 /assets/images/*
 !/assets/images/index.html
 !/assets/images/evo-logo.png
+!/assets/images/home-hero-title-web.jpg
+!/assets/images/home-complex-web.jpg
 !/assets/images/.htaccess
 
 /assets/import/*

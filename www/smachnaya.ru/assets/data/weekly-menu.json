@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "source": "МЕНЮ 1 и 2 СМЕНА.xlsx",
-  "anchorWeekStart": "2026-06-01",
+  "source": "МЕНЮ 1 и 2 СМЕНА.xlsx (anchor 2026-09-21 = M1-1)",
+  "anchorWeekStart": "2026-09-21",
   "shifts": [
     {
       "id": "M1",

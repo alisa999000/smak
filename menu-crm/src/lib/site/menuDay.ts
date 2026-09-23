@@ -21,7 +21,8 @@ const WEEKDAY_RU = [
   "воскресенье",
 ];
 
-const ANCHOR = "2026-06-01";
+/** M1-1 = понедельник этой недели (актуальное меню с 21.09.2026). */
+const ANCHOR = "2026-09-21";
 
 function resolveShift(date: Date): "M1" | "M2" {
   const anchor = parseISODateLocal(ANCHOR);
