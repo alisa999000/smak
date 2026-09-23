@@ -1,0 +1,1 @@
+import{_ as e}from"./OrdersView.vue_vue_type_script_setup_true_lang-BMYLE3FI.js";import{d as o,E as r,o as a}from"./index-CvU2Tqdl.js";const m=o({__name:"OrdersView",setup(s){return(t,_)=>(a(),r(e))}});export{m as default};

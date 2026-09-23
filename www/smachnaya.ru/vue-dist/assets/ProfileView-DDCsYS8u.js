@@ -1,1 +1,0 @@
-import{P as o}from"./ProfileForm-CYNq8PXL.js";import{d as r,c as t,a,b as s,o as n}from"./index-wSfL3RkI.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const f=r({__name:"ProfileView",setup(i){return(m,e)=>(n(),t("div",null,[e[0]||(e[0]=a("h1",{class:"tit-main"},"Профиль",-1)),s(o)]))}});export{f as default};
