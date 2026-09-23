@@ -3,7 +3,7 @@ import { homeHero } from '@/data/homeContent'
 import { ORDER_ACCEPT_UNTIL } from '@/data/siteDefaults'
 
 const orderLine = `Принимаем заказы ежедневно до ${ORDER_ACCEPT_UNTIL} на следующий день`
-const titleImage = '/assets/images/home-hero-title-web.jpg'
+const titleImage = '/images/home-hero-title.jpg'
 </script>
 
 <template>

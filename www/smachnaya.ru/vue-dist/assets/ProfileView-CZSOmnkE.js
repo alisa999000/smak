@@ -1,0 +1,1 @@
+import{P as o}from"./ProfileForm-CYNq8PXL.js";import{d as a,c as r,a as t,b as s,o as n}from"./index-wSfL3RkI.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";const f=a({__name:"ProfileView",setup(i){return(l,e)=>(n(),r("div",null,[e[0]||(e[0]=t("h1",{class:"tit-main"},"Личный кабинет для юр. лиц",-1)),s(o,{legal:""})]))}});export{f as default};

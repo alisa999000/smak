@@ -2,7 +2,7 @@
 import { homeComplex } from '@/data/homeContent'
 import { ORDER_SYSTEM_URL } from '@/data/siteDefaults'
 
-const complexImage = '/assets/images/home-complex-web.jpg'
+const complexImage = '/images/home-complex.jpg'
 </script>
 
 <template>
